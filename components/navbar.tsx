@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Navbar() {
     return(
-            <nav className="font-mono justify-center">
+            <nav className="hidden md:flex md:w-64 flex-col items-center border-r font-mono text-center p-6">
                 <Image
-                className="m-auto flex"
+                className="p-6 flex-col"
                 src="/logoplaceholder.jpg"
                 alt="Logo"
                 width={125}
