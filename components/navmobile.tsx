@@ -9,7 +9,7 @@ export default function NavMobile() {
     const [open, setOpen] = useState(false);
     
     return(
-        <header className="md:hidden sticky top-0 z-50 bg-white border-b font-mono">
+        <header className="md:hidden sticky top-0 z-50 bg-white border-b font-dongle">
             <div className="flex items-center justify-between p-4">
                 <h1 className="text-lg">DAWNIQUECA STEELE</h1>
                 <button
@@ -28,13 +28,13 @@ export default function NavMobile() {
             
             <div className={`overflow-hidden transition-all duration-500 ease-in-out
                 ${open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-            <nav className="flex flex-col items-center gap-4 pb-4">
-                <Link href="/" onClick={() => setOpen(false)}>HOME</Link>
-                <Link href="/animation" onClick={() => setOpen(false)}>ANIMATION</Link>
-                <Link href="/design" onClick={() => setOpen(false)}>DESIGN</Link>
-                <Link href="/dev" onClick={() => setOpen(false)}>DEV</Link>
-                <Link href="/gallery" onClick={() => setOpen(false)}>GALLERY</Link>
-                <Link href="/about" onClick={() => setOpen(false)}>ABOUT</Link>
+            <nav className="flex flex-col items-center gap-4 pb-4 font-figtree">
+                <Link href="/" onClick={() => setOpen(false)}>home</Link>
+                <Link href="/animation" onClick={() => setOpen(false)}>animation</Link>
+                <Link href="/illustration" onClick={() => setOpen(false)}>illustration</Link>
+                <Link href="/design" onClick={() => setOpen(false)}>design</Link>
+                <Link href="/dev" onClick={() => setOpen(false)}>dev</Link>
+                <Link href="/about" onClick={() => setOpen(false)}>about</Link>
 
                 <div className="flex gap-4 pt-2">
                     <a href="https://linkedin.com/in/dawniquecasteele" target="_blank">

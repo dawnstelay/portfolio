@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-dm-sans);
-  --font-mono: var(--font-dm-mono);
+  --font-figtree: var(--font-figtree);
+  --font-dongle: var(--font-dongle);
+  --font-mono: var(--font-space-mono)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +20,8 @@ body {
   background-size: 40px 40px;
   background-position: -19px -19px;
   cursor: url("/cursorplaceholder.svg"), auto;
+  font-family: var(--font-figtree), system-ui, 'Open Sans', sans-serif;
+  font-family: var(--font-dongle), 'Open Sans', sans-serif;
 }
 
 

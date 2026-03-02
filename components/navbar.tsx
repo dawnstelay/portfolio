@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import ImageModal from "./imagemodal";
 
 export default function Navbar() {
     return(
-            <nav className="hidden md:flex md:w-64 flex-col items-center border-r font-mono text-center p-6">
-                <Image
+            <nav className="hidden md:flex md:w-64 flex-col items-center font-figtree text-center p-6">
+                <ImageModal
                 className="p-6 flex-col"
                 src="/logoplaceholder.jpg"
                 alt="Logo"
@@ -12,80 +13,63 @@ export default function Navbar() {
                 height={125}
                />
 
-                <h1 className="flex p-5 text-3xl">DAWNIQUECA STEELE</h1>
-                <ul className="text-xl m-2">
+                
+                <ul className="text-xl m-4">
                     <li> 
-                        <Link href="/">HOME</Link>
+                        <Link href="/">home</Link>
                     </li>
                     
                     <li>
-                        <Link href="/animation">ANIMATION</Link>
+                        <Link href="/animation">animation</Link>
                     </li>
 
                     <li>
-                        <Link href="/design">DESIGN</Link>
+                        <Link href="/illustration">illustration</Link>
                     </li>
 
                     <li>
-                        <Link href="/dev">DEV</Link>
+                        <Link href="/design">design</Link>
                     </li>
 
                     <li>
-                        <Link href="/gallery">GALLERY</Link>
+                        <Link href="/dev">dev</Link>
                     </li>
 
+                    
+
                     <li>
-                        <Link href="/about">ABOUT</Link>
+                        <Link href="/about">about</Link>
                     </li>
                 </ul>
 
                 
-                <div className="flex justify-center items-center">
-                    <a href="https://linkedin.com/in/dawniquecasteele" target="_blank" rel="noopener noreferrer">
-                        <Image
-                        className=" ml-2 mr-2"
-                        src="/linkedin.svg"
-                        alt="Linkedin Logo"
-                        width={30}
-                        height={30}
-                        />
-                    </a>
+                <div className="flex justify-center">
+                    <ul>
+                        <li>
+                            <a href="https://linkedin.com/in/dawniquecasteele" target="_blank" rel="noopener noreferrer">
+                            Linkedin
+                            </a>
+                        </li>
+                            
+                        <li>
+                            <a href="https://github.com/dawniquecasteele" target="_blank" rel="noopener noreferrer"> 
+                            Github
+                            </a>
+                        </li>
 
-                    <a href="https://github.com/dawniquecasteele" target="_blank" rel="noopener noreferrer"> 
-                        <Image 
-                        className=" ml-2 mr-2"
-                        src="/github.svg"
-                        alt="Github Logo"
-                        width={30}
-                        height={30}
-                        />
-                    </a>
+                        <li>
+                            <a href="https://www.artstation.com/dawnstelay" target="_blank" rel="noopener noreferrer">
+                            ArtStation    
+                            </a>
+                        </li>
 
-                    <a href="mailto:dawniqsteele@gmail.com">
-                        <Image 
-                        className=" ml-2 mr-2"
-                        src="/email.svg"
-                        alt="Email Logo"
-                        width={30}
-                        height={30}
-                        />
-                    </a>
+                        <li>
 
-                    <a href="https://www.artstation.com/dawnstelay" target="_blank" rel="noopener noreferrer">
-                        <Image
-                        className=" ml-2 mr-2"
-                        src="/artstation.svg"
-                        alt="Artstation Logo"
-                        width={30}
-                        height={30}
-                        />
-                    </a>
+                        </li>
+                    </ul>
 
                 </div>
-                
-
-
-                
+                               
             </nav>
        
     );

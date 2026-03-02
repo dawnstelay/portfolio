@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/swegd/page.js", "app/gallery/page.js", "app/design/page.js", "app/animation/page.js", "app/about/page.js"  ],
+, "app/dev/page.js", "app/illustration/page.js", "app/design/page.js", "app/animation/page.js", "app/about/page.js"  ],
   "exclude": ["node_modules"]
 }
