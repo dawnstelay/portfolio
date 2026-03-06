@@ -5,7 +5,7 @@ import Navbar from "../components/navbar";
 import NavMobile from "../components/navmobile";
 import FootBar from "../components/footbar";
 import Loader from "../components/loader";
-import Transition from "../components/transition";
+
 
 
 
@@ -48,9 +48,7 @@ export default function RootLayout({
         <NavMobile/>
         <Navbar/>
         <Loader>
-          <Transition>
-            {children}
-          </Transition>
+          {children}
         </Loader>
         <FootBar/>
       </body>

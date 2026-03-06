@@ -22,9 +22,9 @@ export default function FootBar() {
     }
 
     return(
-        <div className="fixed w-100 bottom-0 left-0 w-full flex justify-center pointer-events-none font-mono">
+        <div className="fixed w-100 bottom-0 w-full flex flex-col items-center pointer-events-none font-mono">
             <h3>Dawniqueca Steele</h3>
-            <h3>made with `</h3>
+            <h3>design and code, made with love and espresso</h3>
             <div className={`mb-6 transition-all duration-500 ${
             visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
                 <button onClick={scrollToTop}

@@ -18,24 +18,14 @@ export default function Navbar() {
                     <li> 
                         <Link href="/">home</Link>
                     </li>
-                    
+
                     <li>
-                        <Link href="/animation">animation</Link>
+                        <Link href="/work">work</Link>
                     </li>
 
                     <li>
-                        <Link href="/illustration">illustration</Link>
+                        <Link href="/art">art</Link>
                     </li>
-
-                    <li>
-                        <Link href="/design">design</Link>
-                    </li>
-
-                    <li>
-                        <Link href="/dev">dev</Link>
-                    </li>
-
-                    
 
                     <li>
                         <Link href="/about">about</Link>
