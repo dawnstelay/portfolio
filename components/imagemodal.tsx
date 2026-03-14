@@ -21,7 +21,7 @@ export default function ImageModal({
     return(
         <div>
             <Image
-            className="cursor-pointer hover:scale-105 transition duration-300"
+            className="hover:scale-105 hover:border-dashed hover:border-amber-500 transition duration-300"
             src={src}
             alt={alt}
             width={width}
