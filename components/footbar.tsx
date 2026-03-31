@@ -27,7 +27,7 @@ export default function FootBar() {
             <div className={`mb-6 transition-all duration-500 ${
             visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
                 <button onClick={scrollToTop}
-                className="pointer-events-auto bg-amber-500 text-orange-50 px-5 py-2 rounded-full font-mono shadow-lg hover:bg-violet-200 transition">
+                className="pointer-events-auto bg-amber-500 text-orange-50 px-5 py-2 rounded-full font-mono shadow-lg hover:bg-orange-700 transition">
                 ↑
                 </button>
             </div>

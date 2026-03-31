@@ -13,7 +13,7 @@
 }
 
 body {
-  cursor: none;
+  cursor: none !important;
   background: white;
   background-image: radial-gradient(rgb(186, 186, 186) 1px, transparent 0);
   background-size: 40px 40px;
@@ -22,7 +22,9 @@ body {
   font-family: var(--font-figtree), system-ui, 'Open Sans', sans-serif;
   font-family: var(--font-dongle), 'Open Sans', sans-serif;
 }
-
+body * :hover {
+  cursor: none !important;
+}
 li {
   padding: 0.5em;
 }
