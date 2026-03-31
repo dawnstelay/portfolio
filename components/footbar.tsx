@@ -1,4 +1,5 @@
 'use client'
+
 import Link from "next/link";
 import { useState, useEffect } from "react"
 
@@ -22,14 +23,12 @@ export default function FootBar() {
     }
 
     return(
-        <div className="fixed w-100 bottom-0 left-0 w-full flex justify-center pointer-events-none font-mono">
-            <h3>Dawniqueca Steele</h3>
-            <h3>made with `</h3>
+        <div className="fixed w-100 bottom-0 w-full flex flex-col items-center pointer-events-none font-dongle">
             <div className={`mb-6 transition-all duration-500 ${
             visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
                 <button onClick={scrollToTop}
-                className="pointer-events-auto bg-purple-500 text-white px-5 py-2 rounded-full font-mono shadow-lg hover:bg-purple-600 transition">
-                ↑ Back to Top
+                className="pointer-events-auto bg-amber-500 text-orange-50 px-5 py-2 rounded-full font-mono shadow-lg hover:bg-orange-700 transition">
+                ↑
                 </button>
             </div>
         </div>

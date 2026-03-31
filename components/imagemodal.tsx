@@ -21,7 +21,7 @@ export default function ImageModal({
     return(
         <div>
             <Image
-            className="cursor-pointer hover:scale-105 transition duration-300"
+            className="hover:scale-105 hover:border-dashed hover:border-amber-500 transition duration-300"
             src={src}
             alt={alt}
             width={width}
@@ -32,9 +32,9 @@ export default function ImageModal({
             {open && (
                 <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-6"
                 onClick={() => setOpen(false)}>
-                    <div className="relatice max-w-5xl w-full"
+                    <div className="relative max-w-4xl w-full"
                     onClick={(e) => e.stopPropagation()}>
-                        <button className="absolute -top-10 right-0 text-white text-3xl"
+                        <button className="absolute  right-0 text-white text-6xl"
                         onClick={() => setOpen(false)}>
                             x
                         </button>
