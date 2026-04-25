@@ -1,7 +1,7 @@
 export default function cococoins() {
     return(
         <div>
-            <main className="font-figtree">
+            <main className="font-figtree width-80 float-right justify-right align-right py-32 px-16">
                 CocoCoins
 
                 a beach-themed budget and finance tracker ⋆˚꩜｡ 

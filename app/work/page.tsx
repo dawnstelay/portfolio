@@ -14,56 +14,56 @@ export default function Work() {
     const projects = [
         {
             title: "Bite Me",
-            image: "/logoplaceholder.jpg",
+            image: "/banner.png",
             tags: ["animation", "visual dev"], 
             link: "/work/bite-me"
         },
 
         {
             title: "Charm",
-            image: "/logoplaceholder.jpg",
+            image: "/banner.png",
             tags: ["brand design"],
             link: "/work/charm"
         },
 
         {
             title: "CocoCoins",
-            image: "/logoplaceholder.jpg",
+            image: "/banner.png",
             tags: ["product design", "software dev"],
             link: "/work/cococoins"
         },
 
         {
             title: "Forget Me Not",
-            image: "/logoplaceholder.jpg",
+            image: "/banner.png",
             tags: ["visual dev"],
             link: "/work/fmn"
         },
 
         {
             title: "Perle",
-            image: "/logoplaceholder.jpg",
+            image: "/banner.png",
             tags: ["brand design"],
             link: "/work/perle"
         },
 
         {
             title: "RPGPy",
-            image: "/logoplaceholder.jpg",
+            image: "/banner.png",
             tags: ["software dev"],
             link: "/work/rpgpy"
         },
 
         {
             title: "Skin to Skin",
-            image: "/logoplaceholder.jpg",
+            image: "/banner.png",
             tags: ["product design"],
             link: "/work/skin-to-skin"
         },
 
         {
             title: "Smart Evaluator",
-            image: "/logoplaceholder.jpg",
+            image: "/banner.png",
             tags: ["software dev"],
             link: "/work/smart-evaluator"
         },

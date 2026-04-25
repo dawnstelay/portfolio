@@ -1,7 +1,7 @@
 export default function bm() {
     return(
         <div>
-            <main className="font-figtree">
+            <main className="font-figtree width-80 float-right justify-right align-right py-32 px-16">
                 BITE ME!
 
                 A selfish vampire prince is banished to a reform school for supernatural deliquents, where

@@ -18,7 +18,7 @@ export default function Cursor() {
       border: '1px solid #e27602',
       boxShadow: '0 0 4px #e27602',
       scale: 1.25,
-      backgroundColor: 'transparent',
+      backgroundColor: 'rgba(0, 0, 0, 0)',
       transition: { duration: 0.2 },
     },
 

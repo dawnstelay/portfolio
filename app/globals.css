@@ -2,8 +2,7 @@
 
 @theme inline {
   --font-figtree: var(--font-figtree);
-  --font-dongle: var(--font-dongle);
-  --font-mono: var(--font-space-mono)
+  --font-bricolage: var(--font-bricolage-grotesque);
 }
 
 @media (pointer: coarse) {
@@ -20,7 +19,7 @@ body {
   background-position: -19px -19px;
   
   font-family: var(--font-figtree), system-ui, 'Open Sans', sans-serif;
-  font-family: var(--font-dongle), 'Open Sans', sans-serif;
+  font-family: var(--font-bricolage-grotesque), 'Open Sans', sans-serif;
 }
 body * :hover {
   cursor: none !important;
@@ -46,8 +45,8 @@ main {
 }
 
 li:hover {
-  color: #e27602;
   transition: color 0.5s;
+  color: oklch(94.6% 0.033 307.174);
   
 }
 
@@ -64,7 +63,7 @@ li:hover {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #e27602;
+  background-color: oklch(94.6% 0.033 307.174);
   transform-origin:bottom right;
   transition: transform 0.25s ease-out;
 }

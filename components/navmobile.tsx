@@ -9,9 +9,9 @@ export default function NavMobile() {
     const [open, setOpen] = useState(false);
     
     return(
-        <header className="md:hidden sticky top-0 z-50 bg-white border-b font-dongle w-screen">
+        <header className="md:hidden sticky top-0 z-50 bg-white border-b font-bricolage w-screen">
             <div className="flex items-center justify-between p-4 m-0">
-                <h1 className="text-4xl">dawniqueca steele</h1>
+                <h1 className="text-2xl">dawniqueca steele</h1>
                 <button
                 onClick={() => setOpen(!open)}
                 className="relative w-3 h-3 flex flex-col justify-between"

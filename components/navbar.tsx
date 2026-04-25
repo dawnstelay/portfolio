@@ -5,12 +5,12 @@ import ImageModal from "./imagemodal";
 export default function Navbar() {
     return(
             <nav className="hidden md:flex flex-col w-64 items-center font-figtree p-6">
-                <ImageModal
+                <Image
                 className="p-6 flex flex-col items-center"
-                src="/logo.svg"
+                src="/ducky.svg"
                 alt="Logo"
-                width={125}
-                height={125}
+                width={150}
+                height={150}
                />
 
                 <ul className="text-xl m-4 flex flex-col justify-center text-center">
@@ -66,3 +66,5 @@ export default function Navbar() {
        
     );
 }
+
+// violet-100 -200 , indigo -300, lime -200 -500 -600 

@@ -1,7 +1,7 @@
 export default function perle() {
     return(
         <div>
-            <main className="font-figtree">
+            <main className="font-figtree width-80 float-right justify-right align-right py-32 px-16">
                 Perle 
 
                 Brief: Never have boring nails again! Perle saves you a trip to the salon, and 
