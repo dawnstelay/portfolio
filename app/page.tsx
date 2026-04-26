@@ -5,51 +5,50 @@ import ImageModal from "../components/imagemodal";
 
 export default function Home() {
   return (
-    <main className=" font-figtree float-center justify-center align-center py-32 px-64">
+    <main className=" font-dm_mono px-6">
       
-      <div className=" m-15 pl-5 items-center">
-        <h1 className="text-7xl font-bricolage mb-2">hi, I'm dawniqueca steele!</h1>
-        <h3 className="text-xl">An interdiscplinary designer, focusing on storytelling and interaction.</h3>
+      <div className="text-center m-30">
+        <h1 className="text-7xl font-zen mb-2">hi, I'm dawniqueca steele!</h1>
+        <h3 className="text-xl mt-7">Atlanta-based interdiscplinary designer, focusing on storytelling and interaction ⋆˚꩜｡</h3>
       </div>
        
 
-        <div className="m-auto p-20">
-          <h3 className="text-2xl font-bricolage">featured projects</h3>
-          <div className="m-auto p-5">
-            <div className="pt-10 flex flex-row">
-              <Link href="/work/cococoins">
-              <Image 
-              className="mb-5 pb-5 rounded transition hover:scale-105"
-              src="/banner.png"
-              alt="me!"
-              width={600}
-              height={600}
-              />
+        <div className="text-center">
+          <h3 className="text-4xl font-zen">selected projects</h3>
+          
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 justify-center">
+            
+            <div className="pt-10 p-8 flex-row gap-8 items-center">
+              <Link href="/projects/cococoins">
+                <Image 
+                className="mb-5 pb-5 rounded transition hover:scale-105"
+                src="/banner.png"
+                alt="me!"
+                width={700}
+                height={700}
+                />
               </Link>
               <div>
-                <h1 className="pl-5 text-4xl font-bricolage">CocoCoins</h1>
-                <p className=" items-center flex flex-wrap gap-3 mt-2 m-10 px-4 py-1 border rounded-full text-sm font-figtree bg-amber-500 text-white">product design</p>
-                <p className=" items-center flex flex-wrap gap-3 mt-2 m-10 px-4 py-1 border rounded-full text-sm font-figtree bg-amber-500 text-white">software dev</p>
-
+                <h1 className="pl-5 text-4xl font-zen">CocoCoins</h1>
+                <p className="inline-block px-4 py-1 border rounded-full text-sm font-dm_mono bg-lime-600 text-white">product design</p>
+                <p className="inline-block px-4 py-1 border rounded-full text-sm font-dm_mono bg-lime-600 text-white">software dev</p>
               </div>
-
-
             </div>
             
 
-            <div className="pt-10 flex flex-row">
-              <Link href="/work/skin-to-skin">
-              <Image 
-              className="mb-5 pb-5 rounded transition hover:scale-105"
-              src="/banner.png"
-              alt="me!"
-              width={600}
-              height={600}
+            <div className="pt-10 p-8 flex-row gap-6 items-center">
+              <Link href="/projects/skin-to-skin">
+                <Image 
+                className="mb-5 pb-5 rounded transition hover:scale-105"
+                src="/banner.png"
+                alt="me!"
+                width={700}
+                height={700}
               />
               </Link>
               <div>
-                <h1 className="pl-5 text-4xl font-bricolage">SkinToSkin</h1>
-                <p className=" items-center flex flex-wrap gap-3 mt-2 m-10 px-4 py-1 border rounded-full text-sm font-figtree bg-amber-500 text-white">product design</p>
+                <h1 className="pl-5 p-8 text-4xl font-zen">SkinToSkin</h1>
+                <p className="inline-block px-4 py-1 border rounded-full text-sm font-dm_mono bg-lime-600 text-white">product design</p>
 
               </div>
               
@@ -57,19 +56,19 @@ export default function Home() {
 
             </div>
 
-            <div className="pt-10 flex flex-row">
-              <Link href="/work/rpgpy">
+            <div className="pt-10 p-8 flex-row gap-6 items-center">
+              <Link href="/projects/rpgpy">
               <Image 
               className="mb-5 pb-5 rounded transition hover:scale-105"
               src="/banner.png"
               alt="me!"
-              width={600}
-              height={600}
+              width={700}
+              height={700}
               />
               </Link>
                <div>
-                <h1 className="pl-5 text-4xl font-bricolage">RPG'py</h1>
-                <p className=" items-center flex flex-wrap gap-3 mt-2 m-10 px-4 py-1 border rounded-full text-sm font-figtree bg-violet-200 text-white">software dev</p>
+                <h1 className="pl-5 text-4xl font-zen">RPG'py</h1>
+                <p className="inline-block px-4 py-1 border rounded-full text-sm font-dm_mono bg-lime-600 text-white">software dev</p>
 
               </div>
 
@@ -78,14 +77,15 @@ export default function Home() {
               
           </div>
           
+            <Link href="/projects">
+            <p className="inline-block px-7 py-5 border rounded-full text-sm font-dm_mono bg-lime-500 text-white shadow-lg hover:bg-lime-600 transition">
+            More Works
+            </p>
+            
+            </Link>
         </div>
 
-        <div className="m-auto p-5">
-          <h3 className="text-xl">More Works</h3>
-          <div>
-
-          </div>
-        </div>
+        
   
         
       </main>

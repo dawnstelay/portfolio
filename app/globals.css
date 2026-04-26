@@ -3,6 +3,8 @@
 @theme inline {
   --font-figtree: var(--font-figtree);
   --font-bricolage: var(--font-bricolage-grotesque);
+  --font-dm_mono: var(--font-dm-mono);
+  --font-zen: var(--font-zen-kaku-gothic-new);
 }
 
 @media (pointer: coarse) {
@@ -18,35 +20,23 @@ body {
   background-size: 40px 40px;
   background-position: -19px -19px;
   
-  font-family: var(--font-figtree), system-ui, 'Open Sans', sans-serif;
-  font-family: var(--font-bricolage-grotesque), 'Open Sans', sans-serif;
+  font-family: var(--font-dm-mono), 'Courier New', Courier, monospace;
+  font-family: var(--font-zen-kaku-gothic-new), 'Open Sans', sans-serif;
 }
 body * :hover {
   cursor: none !important;
+}
+
+nav{
+  width: 100%;
 }
 li {
   padding: 0.5em;
 }
 
-.hero {
-  position: fixed;
-  width: 80%;
-  height: 20%;
-  margin-left:20%;
-  padding-left:2%;
-  margin-top: 0%;
-  
-}
-
-main {
-  width: 100%;
-  margin-right: 0;
-  height:auto;
-}
-
 li:hover {
   transition: color 0.5s;
-  color: oklch(94.6% 0.033 307.174);
+  color: #ddd6fe;
   
 }
 
@@ -63,7 +53,7 @@ li:hover {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: oklch(94.6% 0.033 307.174);
+  background-color: #ddd6fe;
   transform-origin:bottom right;
   transition: transform 0.25s ease-out;
 }

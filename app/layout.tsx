@@ -1,24 +1,12 @@
 import type { Metadata } from "next";
-import { Figtree, Bricolage_Grotesque, DM_Mono, Zen_Kaku_Gothic_New } from "next/font/google";
+import {DM_Mono, Zen_Kaku_Gothic_New } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/navbar";
+import Nav from "../components/nav";
 import NavMobile from "../components/navmobile";
 import FootBar from "../components/footbar";
 import Loader from "../components/loader";
 import { CursorContextProvider } from "../components/cursorcontext";
 import Cursor from "../components/customcursor";
-
-const figtree = Figtree({
-  variable: "--font-figtree",
-  subsets: ["latin"],
-  weight: "300"
-})
-
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage-grotesque",
-  subsets: ["latin"],
-  weight: "300",
-})
 
 const zen = Zen_Kaku_Gothic_New({
   variable: "--font-zen-kaku-gothic-new",
@@ -26,7 +14,7 @@ const zen = Zen_Kaku_Gothic_New({
   weight: ["400", "700"],
 })
 
-const mono = DM_Mono({
+const dm_mono = DM_Mono({
   variable: "--font-dm-mono",
   subsets: ["latin"],
   weight: ["300"],
@@ -46,15 +34,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${figtree.variable} ${bricolage.variable} ${mono.variable} ${zen.variable} antialiased min-h-screen flex`}
+        className={`${dm_mono.variable} ${zen.variable} antialiased min-h-screen`}
       >
         <Loader>
         <CursorContextProvider>
         <Cursor/>
-          <div className="flex flex-col md:flex-row">
-          <Navbar/>
+          <div>
+          <Nav/>
         <NavMobile/>
-        <main className=" flex-1">
+        <main>
           {children}
         </main>
         

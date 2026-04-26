@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
     return(
-        <main className="font-figtree width-80 float-right justify-right align-right py-32 px-16">
+        <main className="font-dm_mono width-80 float-right justify-right align-right py-32 px-16">
             
             <div className="ml-20 flex flex-row">
                 <Image 
@@ -13,7 +13,7 @@ export default function About() {
                 />
 
                 <div className="ml-10 mr-70">
-                <h1 className="text-8xl font-bricolage mb-2">hi again!</h1>
+                <h1 className="text-8xl font-zen mb-2">hi again!</h1>
                 <p>My name is Dawniqueca (pronounced daw-nee-qua) and I'm 
                 a freelance designer. I graduated from Kennesaw 
                 State University with a B.S. in Software Engineering and M.A. in 
@@ -25,7 +25,7 @@ export default function About() {
 
             </div>
 
-            <h1 className="text-4xl font-bricolage mt-8">about me</h1>
+            <h1 className="text-4xl font-zen mt-8">about me</h1>
             
         </main>
     );

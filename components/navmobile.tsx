@@ -9,8 +9,8 @@ export default function NavMobile() {
     const [open, setOpen] = useState(false);
     
     return(
-        <header className="md:hidden sticky top-0 z-50 bg-white border-b font-bricolage w-screen">
-            <div className="flex items-center justify-between p-4 m-0">
+        <header className="sm:hidden sticky top-0 z-50 bg-white border-b font-dm_mono p-6">
+            <div className="flex items-center justify-between m-4">
                 <h1 className="text-2xl">dawniqueca steele</h1>
                 <button
                 onClick={() => setOpen(!open)}
@@ -28,7 +28,7 @@ export default function NavMobile() {
             
             <div className={`overflow-hidden transition-all duration-500 ease-in-out
                 ${open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-            <nav className="flex flex-col items-center gap-4 pb-4 font-figtree">
+            <nav className="flex flex-col items-center gap-4 pb-4 font-dm_mono">
                 <Link className="navunderlineanim" href="/" onClick={() => setOpen(false)}>home</Link>
                 <Link className="navunderlineanim" href="/work" onClick={() => setOpen(false)}>work</Link>
                 <Link className="navunderlineanim" href="/art" onClick={() => setOpen(false)}>art</Link>
