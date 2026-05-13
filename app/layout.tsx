@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import {DM_Mono, Zen_Kaku_Gothic_New } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
 import Nav from "../components/nav";
 import NavMobile from "../components/navmobile";
-import FootBar from "../components/footbar";
+import ScrollUp from "../components/scrollUp";
+import Footer from "../components/footer"
 import Loader from "../components/loader";
 import { CursorContextProvider } from "../components/cursorcontext";
 import Cursor from "../components/customcursor";
@@ -45,8 +46,9 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        
-            <FootBar/>
+    
+            <Footer/>
+            <ScrollUp/>
         </div>
         </CursorContextProvider>
         </Loader>

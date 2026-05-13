@@ -12,7 +12,7 @@ export default function Template({
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -15 }}
-        transition={{ duration: 0.35, ease: "easeInOut",}}
+        transition={{ duration: 0.45, ease: "easeInOut",}}
         >
             {children}
         </motion.div>

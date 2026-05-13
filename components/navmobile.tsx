@@ -11,7 +11,16 @@ export default function NavMobile() {
     return(
         <header className="sm:hidden sticky top-0 z-50 bg-white border-b font-dm_mono p-6">
             <div className="flex items-center justify-between m-4">
-                <h1 className="text-2xl">dawniqueca steele</h1>
+                <Link href="/">
+                    <Image
+                        className="flex items-center"
+                        src="/chrysicon.svg"
+                        alt="Logo"
+                        width={60}
+                        height={60}
+                        loading="eager"
+                        />
+                </Link>
                 <button
                 onClick={() => setOpen(!open)}
                 className="relative w-3 h-3 flex flex-col justify-between"
@@ -30,10 +39,11 @@ export default function NavMobile() {
                 ${open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
             <nav className="flex flex-col items-center gap-4 pb-4 font-dm_mono">
                 <Link className="navunderlineanim" href="/" onClick={() => setOpen(false)}>home</Link>
-                <Link className="navunderlineanim" href="/work" onClick={() => setOpen(false)}>work</Link>
+                <Link className="navunderlineanim" href="/projects" onClick={() => setOpen(false)}>projects</Link>
                 <Link className="navunderlineanim" href="/art" onClick={() => setOpen(false)}>art</Link>
                 <Link className="navunderlineanim" href="/about" onClick={() => setOpen(false)}>about</Link>
 
+               {/*
                 <span className=" m-2 items-center h-[0.5px] w-25 bg-black"></span>
 
                 <div className="flex gap-4 pt-2 text-sm">
@@ -53,6 +63,7 @@ export default function NavMobile() {
                         Resume
                     </a>
                 </div>
+                */}
 
             </nav>
             </div>

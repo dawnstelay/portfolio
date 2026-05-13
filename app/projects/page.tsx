@@ -77,9 +77,9 @@ export default function Projects() {
 
 
     return(
-        <main className="font-dm_mono width-80 float-right justify-right align-right py-32 px-16 flex">
+        <main className="font-dm_mono px-6 flex">
             <div>
-            <h1>All Projects</h1>
+            <h1 className="m-5 text-4xl font-zen text-left">All Projects</h1>
             <FilterBar
             tags={tags}
             active={active}

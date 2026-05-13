@@ -27,7 +27,7 @@ export default function Art() {
 
 
     return(
-        <main className="font-mono justify-right flex py-32 px-16">
+        <main className="font-mono flex px-6">
             <div>
                 <h1>All Art</h1>
                 <FilterBar

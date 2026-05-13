@@ -62,3 +62,10 @@ li:hover {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.flower {
+  width: 200px; 
+  aspect-ratio: 1;
+  --g:/37.02% 37.02% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+  mask: 79.389% 90.451% var(--g),20.611% 90.451% var(--g),2.447% 34.549% var(--g),50% 0% var(--g),97.553% 34.549% var(--g),radial-gradient(100% 100%,#6d6273 25.476%,#0000 calc(25.476% + 1px));
+}

@@ -15,8 +15,8 @@ export default function FilterBar({ tags, active, setActive }: Props) {
                 onClick={() => setActive(tag)}
                 className={`px-4 py-1 border rounded-full text-sm font-figtree transition-all duration-200
                 ${active === tag
-                ? "bg-amber-500 text-white border-amber-500"
-                : "hover:bg-orange-200"}`}
+                ? "bg-violet-200 text-lime-700 border-violet-200"
+                : "hover:bg-indigo-300"}`}
                 >
                     {tag}
                 </button>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
     return(
-        <main className="font-dm_mono width-80 float-right justify-right align-right py-32 px-16">
+        <main className="font-dm_mono px-6">
             
             <div className="ml-20 flex flex-row">
                 <Image 
