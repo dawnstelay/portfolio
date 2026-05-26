@@ -5,20 +5,26 @@ import ImageModal from "../components/imagemodal";
 
 export default function Home() {
   return (
-    <main className="font-dm_mono px-6">
+    <main className="font-dm_mono">
       
-      <div className="text-center m-30">
-        <h1 className="text-7xl font-zen mb-2">hi, I'm dawniqueca steele!</h1>
+      <div className="justify-center text-center m-30">
+        <Image
+        className="flex justify-center items-center ml-auto mr-auto"
+        src="/title.svg"
+        alt="me!"
+        width= {900}
+        height= {900}
+        />
         <h3 className="text-xl mt-7">Atlanta-based interdiscplinary designer, focusing on storytelling and interaction ⋆˚꩜｡</h3>
       </div>
        
 
         <section className="text-center">
-          <h3 className="text-4xl font-zen">selected projects</h3>
+          <h3 className="text-4xl font-zen bg-lime-200 pb-2">selected projects</h3>
           
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 justify-center">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 ml-auto mr-auto justify-center">
             
-            <div className="pt-10 p-8 flex-row gap-8 items-center">
+            <div className="pt-10 p-8 flex-row gap-8 items-center ml-auto mr-auto">
               <Link href="/projects/cococoins">
                 <Image 
                 className="mb-5 pb-5 rounded transition hover:scale-105"
@@ -39,7 +45,7 @@ export default function Home() {
             </div>
             
 
-            <div className="pt-10 p-8 flex-row gap-6 items-center">
+            <div className="pt-10 p-8 flex-row gap-6 items-center ml-auto mr-auto">
               <Link href="/projects/skin-to-skin">
                 <Image 
                 className="mb-5 pb-5 rounded transition hover:scale-105"
@@ -58,7 +64,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="pt-10 p-8 flex-row gap-6 items-center">
+            <div className="pt-10 p-8 flex-row gap-6 items-center ml-auto mr-auto">
               <Link href="/projects/rpgpy">
               <Image 
               className="mb-5 pb-5 rounded transition hover:scale-105"

@@ -23,11 +23,11 @@ export default function ScrollUp() {
     }
 
     return(
-        <div className="fixed w-100 bottom-0 right-0 flex flex-col items-center pointer-events-auto font-dm_mono">
-            <div className={`mb-6 transition-all duration-500 ${
+        <div className="fixed bottom-0 right-0 m-8 pointer-events-auto font-dm_mono">
+            <div className={`transition-all duration-500 ${
             visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
                 <button onClick={scrollToTop}
-                className="flower">
+                className="flower pointer-events-auto bg-violet-300 text-orange-50 rounded-full font-mono shadow-lg hover:bg-indigo-300 transition">
                 ↑
                 </button>
             </div>
@@ -36,4 +36,4 @@ export default function ScrollUp() {
 }
 
 
-/*className="flower pointer-events-auto bg-violet-200 text-orange-50 px-4 py-2 rounded-full font-mono shadow-lg hover:bg-indigo-300 transition"> */
+
