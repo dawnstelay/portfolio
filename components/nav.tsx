@@ -1,6 +1,7 @@
 //add css to show what page the user is currently on 
 import Image from "next/image";
 import Link from "next/link";
+import ImageModal from "./imagemodal";
 
 export default function Nav() {
     return (
@@ -25,8 +26,7 @@ export default function Nav() {
                                 alt="Logo"
                                 width={60}
                                 height={60}
-                                loading="eager"
-                            />
+                            /> 
                         </Link>
                     </li>
 

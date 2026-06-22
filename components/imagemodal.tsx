@@ -9,12 +9,14 @@ export default function ImageModal({
     alt,
     width,
     height,
+    descriptor,
 }: {
     className : string
     src: string
     alt: string
     width: number
     height : number
+    descriptor: string
 }) {
     const [open, setOpen] = useState(false)
 
@@ -34,7 +36,7 @@ export default function ImageModal({
                 onClick={() => setOpen(false)}>
                     <div className="relative max-w-4xl w-full"
                     onClick={(e) => e.stopPropagation()}>
-                        <button className="absolute  right-0 text-white text-6xl"
+                        <button className="absolute right-0 text-white text-6xl"
                         onClick={() => setOpen(false)}>
                             x
                         </button>
@@ -45,6 +47,7 @@ export default function ImageModal({
                         width={width}
                         height={height}
                         />
+                        <p className="text-center justify-center text-white text-xl font-zen">{descriptor}</p>
                     </div>
                 </div>
             )}

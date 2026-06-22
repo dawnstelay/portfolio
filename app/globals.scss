@@ -78,3 +78,9 @@ li:hover {
   }
   mask: radial-gradient(100% 100%,#000 calc(var(--r)/tan(180deg/5)),#0000 0),#{$m};
 }
+
+.box {
+  mask: 
+    linear-gradient(180deg,#0000 30px,#000 0),
+    radial-gradient(30px,#000 calc(100% - 1px),#0000) top/55.5px 60px
+}

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
     return(
-        <div className="font-dm_mono w-full bottom-0 bg-lime-200 p-5 mt-5 justify-between">
+        <div className="box font-dm_mono h-30 p-5 pt-9 w-full bottom-0 bg-lime-200 mt-5 justify-between">
             <h1>interested in working together?</h1>
             
                 <div className="flex gap-4 pt-2 text-sm">

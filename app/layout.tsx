@@ -6,6 +6,7 @@ import NavMobile from "../components/navmobile";
 import ScrollUp from "../components/scrollUp";
 import Footer from "../components/footer"
 import Loader from "../components/loader";
+import Transition from "../components/transition";
 import { CursorContextProvider } from "../components/cursorcontext";
 import Cursor from "../components/customcursor";
 
@@ -44,7 +45,9 @@ export default function RootLayout({
           <Nav/>
         <NavMobile/>
         <main>
+          <Transition>
           {children}
+          </Transition>
         </main>
     
             <Footer/>
