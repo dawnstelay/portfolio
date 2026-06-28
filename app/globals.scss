@@ -4,6 +4,7 @@
 @theme inline {
   --font-dm_mono: var(--font-dm-mono);
   --font-zen: var(--font-zen-kaku-gothic-new);
+  --font-dela: var(--font-dela-gothic-one);
 }
 
 @media (pointer: coarse) {
@@ -32,9 +33,9 @@ li {
   padding: 0.5em;
 }
 
-li:hover {
+li:hover, a:hover {
   transition: color 0.5s;
-  color: #ddd6fe;
+  color: #ddd6ff;
   
 }
 
@@ -51,7 +52,7 @@ li:hover {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #ddd6fe;
+  background-color: #ddd6ff;
   transform-origin:bottom right;
   transition: transform 0.25s ease-out;
 }

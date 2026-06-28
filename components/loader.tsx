@@ -35,7 +35,7 @@ export default function Loader({
                 fadeOut ? "opacity-0" : "opacity-100"}`}>
                 <div className="flex flex-col items-center space-y-6">
                     <div className="w-10 h-10 border-4 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
-                        <p className="font-mono tracking-wide text-sm uppercase">
+                        <p className="font-zen tracking-wide text-sm uppercase">
                         Loading
                         </p>
                 </div>

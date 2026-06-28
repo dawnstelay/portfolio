@@ -79,7 +79,7 @@ export default function Projects() {
     return(
         <main className="font-dm_mono px-6 flex">
             <div>
-            <h1 className="m-5 text-4xl font-zen text-left">All Projects</h1>
+            <h1 className="m-10 text-4xl font-zen font-bold text-left">ALL PROJECTS</h1>
             <FilterBar
             tags={tags}
             active={active} 
@@ -100,7 +100,7 @@ export default function Projects() {
                         />
 
                         <h3 className="mt-2 font-zen text-lg"> {project.title} </h3>
-                        <p className="inline-block px-4 py-1 border rounded-full text-sm font-dm_mono bg-indigo-200 lime-600 text-white">{project.tags}</p>
+                        <p className="inline-block px-4 py-1 border rounded-full text-sm font-dm_mono bg-violet-200 lime-600 text-white">{project.tags}</p>
                         </Link>
                     ))}
                 </div>   

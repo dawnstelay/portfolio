@@ -14,7 +14,7 @@ export default function NavMobile() {
                 <Link href="/">
                     <Image
                         className="flex items-center"
-                        src="/chrysicon.svg"
+                        src="/logo.svg"
                         alt="Logo"
                         width={60}
                         height={60}

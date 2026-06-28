@@ -37,7 +37,7 @@ export default function Art() {
     return(
         <main className="font-mono flex px-6">
             <div>
-                <h1>All Art</h1>
+                <h1 className="m-10 text-4xl font-zen font-bold text-left">Gallery</h1>
                 <FilterBar
                 tags={tags}
                 active={active}

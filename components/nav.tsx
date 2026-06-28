@@ -1,9 +1,11 @@
-//add css to show what page the user is currently on 
+'use client'
 import Image from "next/image";
 import Link from "next/link";
-import ImageModal from "./imagemodal";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 export default function Nav() {
+    const pathname= usePathname();
     return (
         <nav className="hidden sm:flex justify-center border-b border-dashed">
         <div className="flex justify-between px-6 py-4 font-dm_mono">
@@ -12,11 +14,13 @@ export default function Nav() {
 
             <ul className="text-xl m-4 flex flex-row items-center gap-2">
                     <li> 
-                        <Link className="navunderlineanim" href="/">home</Link>
+                        <Link className="navunderlineanim"
+                        href="/">home</Link>
                     </li>
 
                     <li>
-                        <Link className="navunderlineanim" href="/projects">projects</Link>
+                        <Link className={`${pathname === '/projects' ? 'text-violet-200' : ''} navunderlineanim`}
+                        href="/projects">projects</Link>
                     </li>
                     <li>
                         <Link href="/">
@@ -31,11 +35,13 @@ export default function Nav() {
                     </li>
 
                     <li>
-                        <Link className="navunderlineanim" href="/art">art</Link>
+                        <Link className={`${pathname === '/art' ? 'text-violet-200' : ''} navunderlineanim`}
+                        href="/art">art</Link>
                     </li>
 
                     <li>
-                        <Link className="navunderlineanim" href="/about">about</Link>
+                        <Link className={`${pathname === '/about' ? 'text-violet-200' : ''} navunderlineanim`}
+                        href="/about">about</Link>
                     </li>
             </ul>
 

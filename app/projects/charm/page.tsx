@@ -1,7 +1,7 @@
 export default function charm() {
     return(
         <div>
-            <main className="font-figtree width-80 float-right justify-right align-right py-32 px-16">
+            <main className="font-dm_mono width-100 justify-between">
                 Charm Design
 
                 Brief: Charm believes there's more to tea than just tea! They know that tea is a way of relaxing and unwinding, 

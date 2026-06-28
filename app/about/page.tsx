@@ -21,11 +21,15 @@ export default function About() {
                 create unique experiences for our audience. Whether it be product design, 
                 animation, or game development, I am all for it! 
                 </p>
+
+                <p>dawniqsteeele@gmail.com</p>
                 </div>
 
             </div>
 
             <h1 className="text-4xl font-zen mt-8">about me</h1>
+
+            
             
         </main>
     );

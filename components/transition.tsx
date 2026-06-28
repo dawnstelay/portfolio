@@ -25,4 +25,3 @@ export default function Transition({
     )
 }
 
-/* fix for project pages */

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {DM_Mono, Zen_Kaku_Gothic_New } from "next/font/google";
+import {DM_Mono, Zen_Kaku_Gothic_New, Dela_Gothic_One } from "next/font/google";
 import "./globals.scss";
 import Nav from "../components/nav";
 import NavMobile from "../components/navmobile";
@@ -22,6 +22,12 @@ const dm_mono = DM_Mono({
   weight: ["300"],
 })
 
+const dela = Dela_Gothic_One({
+  variable: "--font-dela-gothic-one",
+  subsets: ["latin"],
+  weight:["400"],
+})
+
 
 export const metadata: Metadata = {
   title: "dawniqueca steele ⋆˚ೀ",
@@ -36,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dm_mono.variable} ${zen.variable} antialiased min-h-screen`}
+        className={`${dm_mono.variable} ${zen.variable} ${dela.variable} antialiased min-h-screen`}
       >
         <Loader>
         <CursorContextProvider>
