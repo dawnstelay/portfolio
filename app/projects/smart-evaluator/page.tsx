@@ -7,19 +7,23 @@ export default function smartEvaluator(){
     return(
         <main className="font-dm_mono width-100 justify-between">
            <section className="flex flex-row">
-                <section className="text-center p-20 border-r border-dashed ">
-                    <h3 className="font-zen text-4xl"> SMART EVALUATOR </h3>
+                <section className="text-left p-20 border-r border-dashed w-[60%]">
+                    <h3 className="font-zen font-bold text-6xl mb-10 mt-20"> SMART EVALUATOR </h3>
                     <h5>OVERVIEW</h5>
-                    <div className="flex flex-col">
-                        <div>
+                    <p className="font-zen">An web-based application designed to determine vendibility status of MRO supplies.</p>
+                    <div className="flex flex-row m-5 ml-0">
+                        <div className="w-[30%]">
                             <h5>PROJECT TYPE</h5>
+                            <p className="font-zen">Software Development</p>
                         </div>
                         
-                        <div>
+                        <div className="w-[30%]">
                             <h5>TOOLS</h5>
+                            <p className="font-zen">Express.js, React, MongoDB, ChatGPT4.0, ScrapingBee</p>
                         </div>
-                        <div>
+                        <div className="w-[30%]">
                             <h5>DELIVERABLES</h5>
+                            <p className="font-zen">Web Application, Documentation, Pitch Deck</p>
                         </div>
 
                     </div>
@@ -32,32 +36,35 @@ export default function smartEvaluator(){
             </section>
 
             <section className="flex flex-row">
-                <div className="w-20 b-0">
-                    <a>PROBLEM LINK</a>
-                    <a>RESEARCH LINK</a>
-                    <a>PROCESS LINK</a>
-                    <a>FINAL LINK</a>
-                    <a>THOUGHTS LINK</a>
-                </div>
+                
+                    <ul className="m-10 gap-3 top-0 p-10 sticky z-50 self-start">
+                    <li><Link href="#problem" className=" px-4 py-1 items-center border rounded-full bg-lime-200 text-violet-600 m-10">PROBLEM LINK</Link></li>
+                    <li><Link href="#research" className="px-4 py-1 items-center border rounded-full bg-lime-200 text-violet-600 m-10">RESEARCH LINK</Link></li>
+                    <li><Link href="#process" className="px-4 py-1 items-center border rounded-full bg-lime-200 text-violet-600 m-10">PROCESS LINK</Link></li>
+                    <li><Link href="#final" className="px-4 py-1 items-center border rounded-full bg-lime-200 text-violet-600 m-10">FINAL LINK</Link></li>
+                    <li><Link href="#thoughts" className="px-4 py-1 items-center border rounded-full bg-lime-200 text-violet-600 m-10">THOUGHTS LINK</Link></li>
+                    </ul>
+                    
+                
                 
                 <div>
-                    <section>
+                    <section id="problem" className="h-100 bg-violet-200 text-center w-full">
                         PROBLEM
                     </section>
 
-                    <section>
+                    <section id="research" className="h-100 bg-violet-200">
                         RESEARCH
                     </section>
            
-                    <section>
+                    <section id="process" className="h-100 bg-violet-200">
                         PROCESS
                     </section>
 
-                    <section>
+                    <section id="final" className="h-100 bg-violet-200">
                         FINAL
                     </section>
 
-                    <section>
+                    <section id="thoughts" className="h-100 bg-violet-200">
                         THOUGHTS
                     </section>
 

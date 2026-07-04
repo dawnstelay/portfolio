@@ -5,7 +5,7 @@ export default function charm() {
                 Charm Design
 
                 Brief: Charm believes there's more to tea than just tea! They know that tea is a way of relaxing and unwinding, 
-                which is why they'vr created a monthly subscription box for all the tea lovers out there. The box can be customized
+                which is why they've created a monthly subscription box for all the tea lovers out there. The box can be customized
                 to fit the neesds of their customers, and each month the customer gets a secret flavour to try out.
                 Charm wants their branding to feel relaxing, minimal, and unique.
                 

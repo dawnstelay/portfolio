@@ -1,9 +1,36 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import ImageModal from "../components/imagemodal";
+import Card from "../components/card"
 
 export default function Home() {
+
+  const projects= [
+    {
+      title: "CocoCoins",
+      image: "/banner.png",
+      tags: ["", ""],
+      descriptor: "Information about CocoCoins will go here.",
+      link: "/projects/cococoins"
+    },
+
+    {
+      title: "Skin to Skin",
+      image: "/banner.png",
+      tags: ["", ""],
+      descriptor: "Information about sts will go here.",
+      link: "/projects/skin-to-skin"
+    },
+
+    {
+      title: "RPG'py",
+      image: "/banner.png",
+      tags: ["", ""],
+      descriptor: "Information about rpgpy will go here.",
+      link: "/projects/rpgpy"
+    }
+  ]
+  
   return (
     <main className="font-dm_mono">
       

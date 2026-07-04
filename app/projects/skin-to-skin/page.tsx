@@ -8,6 +8,13 @@ export default function sts() {
                 Competitors:
                 INCIDecoder 
                 SkinSort
+
+                Current Color Palette
+                #98AA9D 
+                #B3C9D6 
+                #F2EFE2
+                #2D3536 
+                #697C70
             </main>
         </div>
     )
