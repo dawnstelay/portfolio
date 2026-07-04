@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react"
 
-export default function FootBar() {
+export default function ScrollUp() {
     const [visible, setVisible] = useState(false)
 
     useEffect(() => {
@@ -23,14 +23,17 @@ export default function FootBar() {
     }
 
     return(
-        <div className="fixed w-100 bottom-0 w-full flex flex-col items-center pointer-events-none font-dongle">
-            <div className={`mb-6 transition-all duration-500 ${
+        <div className="fixed bottom-0 right-0 m-8 pointer-events-auto font-dm_mono">
+            <div className={`transition-all duration-500 ${
             visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
                 <button onClick={scrollToTop}
-                className="pointer-events-auto bg-amber-500 text-orange-50 px-5 py-2 rounded-full font-mono shadow-lg hover:bg-orange-700 transition">
+                className="flower pointer-events-auto bg-violet-200 text-orange-50 rounded-full font-mono shadow-lg hover:bg-indigo-300 transition">
                 ↑
                 </button>
             </div>
         </div>
     )
 }
+
+
+

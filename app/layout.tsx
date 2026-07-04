@@ -1,24 +1,14 @@
 import type { Metadata } from "next";
-import { Figtree, Bricolage_Grotesque, DM_Mono, Zen_Kaku_Gothic_New } from "next/font/google";
-import "./globals.css";
-import Navbar from "../components/navbar";
+import {DM_Mono, Zen_Kaku_Gothic_New, Dela_Gothic_One } from "next/font/google";
+import "./globals.scss";
+import Nav from "../components/nav";
 import NavMobile from "../components/navmobile";
-import FootBar from "../components/footbar";
+import ScrollUp from "../components/scrollUp";
+import Footer from "../components/footer"
 import Loader from "../components/loader";
+import Transition from "../components/transition";
 import { CursorContextProvider } from "../components/cursorcontext";
 import Cursor from "../components/customcursor";
-
-const figtree = Figtree({
-  variable: "--font-figtree",
-  subsets: ["latin"],
-  weight: "300"
-})
-
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage-grotesque",
-  subsets: ["latin"],
-  weight: "300",
-})
 
 const zen = Zen_Kaku_Gothic_New({
   variable: "--font-zen-kaku-gothic-new",
@@ -26,10 +16,16 @@ const zen = Zen_Kaku_Gothic_New({
   weight: ["400", "700"],
 })
 
-const mono = DM_Mono({
+const dm_mono = DM_Mono({
   variable: "--font-dm-mono",
   subsets: ["latin"],
   weight: ["300"],
+})
+
+const dela = Dela_Gothic_One({
+  variable: "--font-dela-gothic-one",
+  subsets: ["latin"],
+  weight:["400"],
 })
 
 
@@ -46,19 +42,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${figtree.variable} ${bricolage.variable} ${mono.variable} ${zen.variable} antialiased min-h-screen flex`}
+        className={`${dm_mono.variable} ${zen.variable} ${dela.variable} antialiased min-h-screen`}
       >
         <Loader>
         <CursorContextProvider>
         <Cursor/>
-          <div className="flex flex-col md:flex-row">
-          <Navbar/>
+          <div>
+          <Nav/>
         <NavMobile/>
-        <main className=" flex-1">
+        <main>
+          <Transition>
           {children}
+          </Transition>
         </main>
-        
-            <FootBar/>
+    
+            <Footer/>
+            <ScrollUp/>
         </div>
         </CursorContextProvider>
         </Loader>

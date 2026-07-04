@@ -1,0 +1,87 @@
+@use "tailwindcss";
+@use 'sass:list';
+
+@theme inline {
+  --font-dm_mono: var(--font-dm-mono);
+  --font-zen: var(--font-zen-kaku-gothic-new);
+  --font-dela: var(--font-dela-gothic-one);
+}
+
+@media (pointer: coarse) {
+  html, body {
+    cursor: auto;
+  }
+}
+
+body {
+  cursor: none !important;
+  background: white;
+  background-image: radial-gradient(rgb(186, 186, 186) 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+  font-family: var(--font-dm-mono), 'Courier New', Courier, monospace;
+  font-family: var(--font-zen-kaku-gothic-new), 'Open Sans', sans-serif;
+}
+body * :hover {
+  cursor: none !important;
+}
+
+nav{
+  width: 100%;
+}
+li {
+  padding: 0.5em;
+}
+
+li:hover, a:hover {
+  transition: color 0.5s;
+  color: #ddd6ff;
+  
+}
+
+.navunderlineanim {
+  display: inline-block;
+  position: relative;
+}
+
+.navunderlineanim::after {
+  content:'';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ddd6ff;
+  transform-origin:bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navunderlineanim:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+.flower {  
+  width: 75px;
+  --r: calc(50%/(1 + 1/sin(180deg/5))); 
+  aspect-ratio: 1;
+  $m: ();
+  @for $i from 1 through 5 { 
+    $m: list.append($m, 
+      radial-gradient(50% 50%,#000 100%,#0000) no-repeat
+      calc(50% + 50%*cos(360deg*#{calc($i / 5)})) 
+      calc(50% + 50%*sin(360deg*#{calc($i / 5)}))
+     / calc(2*var(--r)) calc(2*var(--r)), 
+    comma);
+  }
+  mask: radial-gradient(100% 100%,#000 calc(var(--r)/tan(180deg/5)),#0000 0),#{$m};
+}
+
+.box {
+  mask: 
+    linear-gradient(180deg,#0000 30px,#000 0),
+    radial-gradient(30px,#000 calc(100% - 1px),#0000) top/55.5px 60px
+}

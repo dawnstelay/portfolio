@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FilterBar from "../../components/filters";
 
-export default function Work() {
+export default function Projects() {
    
     const [active, setActive] = useState("all")
     
@@ -16,56 +16,56 @@ export default function Work() {
             title: "Bite Me",
             image: "/banner.png",
             tags: ["animation", "visual dev"], 
-            link: "/work/bite-me"
+            link: "/projects/bite-me"
         },
 
         {
             title: "Charm",
             image: "/banner.png",
             tags: ["brand design"],
-            link: "/work/charm"
+            link: "/projects/charm"
         },
 
         {
             title: "CocoCoins",
             image: "/banner.png",
             tags: ["product design", "software dev"],
-            link: "/work/cococoins"
+            link: "/projects/cococoins"
         },
 
         {
             title: "Forget Me Not",
             image: "/banner.png",
             tags: ["visual dev"],
-            link: "/work/fmn"
+            link: "/projects/fmn"
         },
 
         {
             title: "Perle",
             image: "/banner.png",
             tags: ["brand design"],
-            link: "/work/perle"
+            link: "/projects/perle"
         },
 
         {
             title: "RPGPy",
             image: "/banner.png",
             tags: ["software dev"],
-            link: "/work/rpgpy"
+            link: "/projects/rpgpy"
         },
 
         {
             title: "Skin to Skin",
             image: "/banner.png",
             tags: ["product design"],
-            link: "/work/skin-to-skin"
+            link: "/projects/skin-to-skin"
         },
 
         {
             title: "Smart Evaluator",
             image: "/banner.png",
             tags: ["software dev"],
-            link: "/work/smart-evaluator"
+            link: "/projects/smart-evaluator"
         },
         
     ]
@@ -77,12 +77,12 @@ export default function Work() {
 
 
     return(
-        <main className="font-figtree width-80 float-right justify-right align-right py-32 px-16 flex">
+        <main className="font-dm_mono px-6 flex">
             <div>
-            <h1>All Projects</h1>
+            <h1 className="m-10 text-4xl font-zen font-bold text-left">ALL PROJECTS</h1>
             <FilterBar
             tags={tags}
-            active={active}
+            active={active} 
             setActive={setActive}
             />
 
@@ -99,7 +99,8 @@ export default function Work() {
                             className="rounded transition hover:scale-105"
                         />
 
-                        <h3 className="mt-2 font-figtree text-lg"> {project.title} </h3>
+                        <h3 className="mt-2 font-zen text-lg"> {project.title} </h3>
+                        <p className="inline-block px-4 py-1 border rounded-full text-sm font-dm_mono bg-violet-200 lime-600 text-white">{project.tags}</p>
                         </Link>
                     ))}
                 </div>   

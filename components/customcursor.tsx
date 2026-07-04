@@ -15,8 +15,8 @@ export default function Cursor() {
 
   const variants = {
     cursorEnter: {
-      border: '1px solid #e27602',
-      boxShadow: '0 0 4px #e27602',
+      border: '1px solid #84cc16',
+      boxShadow: '0 0 4px #84cc16',
       scale: 1.25,
       backgroundColor: 'rgba(0, 0, 0, 0)',
       transition: { duration: 0.2 },
@@ -25,7 +25,7 @@ export default function Cursor() {
     cursorLeave: {
       border: '2px solid transparent',
       scale: 1,
-      backgroundColor: '#e27602',
+      backgroundColor: '#84cc16',
       transition: { duration: 0.2 },
     },
   }
@@ -57,7 +57,7 @@ export default function Cursor() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed top-0 left-0 w-6 h-6 rounded-full z-[9999]"
+      className="pointer-events-none fixed top-0 left-0 w-6 h-6 rounded-full z-100"
       variants={variants}
       animate={variant}
       style={{

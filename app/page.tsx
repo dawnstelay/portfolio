@@ -1,91 +1,140 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import ImageModal from "../components/imagemodal";
+import Card from "../components/card"
 
 export default function Home() {
+
+  const projects= [
+    {
+      title: "CocoCoins",
+      image: "/banner.png",
+      tags: ["", ""],
+      descriptor: "Information about CocoCoins will go here.",
+      link: "/projects/cococoins"
+    },
+
+    {
+      title: "Skin to Skin",
+      image: "/banner.png",
+      tags: ["", ""],
+      descriptor: "Information about sts will go here.",
+      link: "/projects/skin-to-skin"
+    },
+
+    {
+      title: "RPG'py",
+      image: "/banner.png",
+      tags: ["", ""],
+      descriptor: "Information about rpgpy will go here.",
+      link: "/projects/rpgpy"
+    }
+  ]
+  
   return (
-    <main className=" font-figtree float-center justify-center align-center py-32 px-64">
+    <main className="font-dm_mono">
       
-      <div className=" m-15 pl-5 items-center">
-        <h1 className="text-7xl font-bricolage mb-2">hi, I'm dawniqueca steele!</h1>
-        <h3 className="text-xl">An interdiscplinary designer, focusing on storytelling and interaction.</h3>
-      </div>
+      <section className="flex flex-row justify-center align-center text-center m-30">
+        <div className="flex flex-col text-center items-center justify-center">
+          <h3 className="text-xl mt-7">hi, my name is</h3>
+          <h1 className="text-7xl font-dela">dawniqueca steele</h1>
+          <h3 className="text-xl mt-7">Atlanta-based interdiscplinary designer, focusing on storytelling and interaction ⋆˚꩜｡</h3>
+        </div>
+        <img className= "w-150 h-150" src="/placeholder.gif" />
+        <div>
+
+        </div>
+      </section>
+
+
+      <section>
+        <h3> what I do</h3>
+      </section>
        
 
-        <div className="m-auto p-20">
-          <h3 className="text-2xl font-bricolage">featured projects</h3>
-          <div className="m-auto p-5">
-            <div className="pt-10 flex flex-row">
-              <Link href="/work/cococoins">
-              <Image 
-              className="mb-5 pb-5 rounded transition hover:scale-105"
-              src="/banner.png"
-              alt="me!"
-              width={600}
-              height={600}
-              />
+        <section className="text-center">
+          <h3 className="text-4xl font-zen font-bold pb-2">selected projects</h3>
+          
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 ml-auto mr-auto justify-center">
+            
+            <div className="pt-10 p-8 flex-row gap-8 items-center ml-auto mr-auto">
+              <Link href="/projects/cococoins">
+                <Image 
+                className="mb-5 pb-5 rounded transition hover:scale-105"
+                src="/banner.png"
+                alt="me!"
+                width={700}
+                height={700}
+                />
               </Link>
               <div>
-                <h1 className="pl-5 text-4xl font-bricolage">CocoCoins</h1>
-                <p className=" items-center flex flex-wrap gap-3 mt-2 m-10 px-4 py-1 border rounded-full text-sm font-figtree bg-amber-500 text-white">product design</p>
-                <p className=" items-center flex flex-wrap gap-3 mt-2 m-10 px-4 py-1 border rounded-full text-sm font-figtree bg-amber-500 text-white">software dev</p>
-
+                <h1 className="pl-5 text-4xl font-zen text-left">CocoCoins</h1>
+                <h3 className="pl-5 mt-2 text-lg text-left">Some details about CocoCoins</h3>
+                <div className = "text-left m-5">
+                <p className="inline-block px-4 py-1 mr-2 border rounded-full text-sm font-dm_mono bg-violet-200 text-white">product design</p>
+                <p className="inline-block px-4 py-1 border rounded-full text-sm font-dm_mono bg-violet-200 text-white">software dev</p>
+                </div>
               </div>
-
-
             </div>
             
 
-            <div className="pt-10 flex flex-row">
-              <Link href="/work/skin-to-skin">
-              <Image 
-              className="mb-5 pb-5 rounded transition hover:scale-105"
-              src="/banner.png"
-              alt="me!"
-              width={600}
-              height={600}
+            <div className="pt-10 p-8 flex-row gap-6 items-center ml-auto mr-auto">
+              <Link href="/projects/skin-to-skin">
+                <Image 
+                className="mb-5 pb-5 rounded transition hover:scale-105"
+                src="/banner.png"
+                alt="me!"
+                width={700}
+                height={700}
               />
               </Link>
               <div>
-                <h1 className="pl-5 text-4xl font-bricolage">SkinToSkin</h1>
-                <p className=" items-center flex flex-wrap gap-3 mt-2 m-10 px-4 py-1 border rounded-full text-sm font-figtree bg-amber-500 text-white">product design</p>
-
+                <h1 className="pl-5 text-4xl font-zen text-left">Skin-to-Skin</h1>
+                <h3 className="pl-5 mt-2 text-lg text-left">Some details about sts</h3>
+                <div className = "text-left m-5">
+                <p className="inline-block px-4 py-1 mr-2 border rounded-full text-sm font-dm_mono bg-lime-600 text-white">product design</p>
+                </div>
               </div>
-              
-
-
             </div>
 
-            <div className="pt-10 flex flex-row">
-              <Link href="/work/rpgpy">
+            <div className="pt-10 p-8 flex-row gap-6 items-center ml-auto mr-auto">
+              <Link href="/projects/rpgpy">
               <Image 
               className="mb-5 pb-5 rounded transition hover:scale-105"
               src="/banner.png"
               alt="me!"
-              width={600}
-              height={600}
+              width={700}
+              height={700}
               />
               </Link>
                <div>
-                <h1 className="pl-5 text-4xl font-bricolage">RPG'py</h1>
-                <p className=" items-center flex flex-wrap gap-3 mt-2 m-10 px-4 py-1 border rounded-full text-sm font-figtree bg-violet-200 text-white">software dev</p>
-
+                <h1 className="pl-5 text-4xl font-zen text-left">RPG'py</h1>
+                <h3 className="pl-5 mt-2 text-lg text-left">Some details about RPG'py</h3>
+                <div className = "text-left m-5">
+                <p className="inline-block px-4 py-1 border rounded-full text-sm font-dm_mono bg-lime-600 text-white">software dev</p>
+                </div>
               </div>
-
-
             </div>
               
           </div>
-          
-        </div>
+            <Link href="/projects">
+            <p className="inline-block px-7 py-5 border rounded-full text-sm font-dm_mono bg-lime-500 text-white shadow-lg hover:bg-lime-600 transition">
+            More Works
+            </p>
+            
+            </Link>
+        </section>
 
-        <div className="m-auto p-5">
-          <h3 className="text-xl">More Works</h3>
-          <div>
 
+        <section>
+          <h3 className="text-center text-4xl font-zen">Gallery</h3>
+
+          <div className="m-20">
+            FILLER
           </div>
-        </div>
+        </section>
+
+        
   
         
       </main>
