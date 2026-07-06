@@ -1,4 +1,5 @@
 'use client'
+
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -9,7 +10,6 @@ export default function Nav() {
     return (
         <nav className="hidden sm:flex justify-center border-b border-dashed">
         <div className="flex justify-between px-6 py-4 font-dm_mono">
-            
             
 
             <ul className="text-xl m-4 flex flex-row items-center gap-2">

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import {DM_Mono, Zen_Kaku_Gothic_New, Dela_Gothic_One } from "next/font/google";
 import "./globals.scss";
-import Nav from "../components/nav";
-import NavMobile from "../components/navmobile";
+import Navbar from "../components/navbar";
 import ScrollUp from "../components/scrollUp";
 import Footer from "../components/footer"
 import Loader from "../components/loader";
@@ -42,14 +41,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dm_mono.variable} ${zen.variable} ${dela.variable} antialiased min-h-screen`}
+        className={`${dm_mono.variable} ${zen.variable} ${dela.variable} antialiased`}
       >
         <Loader>
         <CursorContextProvider>
         <Cursor/>
           <div>
-          <Nav/>
-        <NavMobile/>
+          <Navbar/>
         <main>
           <Transition>
           {children}

@@ -5,7 +5,7 @@ import Image from "next/image";
 import ImageModal from "../../components/imagemodal";
 import FilterBar from '../../components/filters';
 
-export default function Art() {
+export default function Art() { 
     
     const [active, setActive] = useState("all")
 

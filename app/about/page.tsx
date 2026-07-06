@@ -6,10 +6,11 @@ export default function About() {
             
             <div className="ml-20 flex flex-row">
                 <Image 
+                className="aspect-auto object-fit"
                 src="/me.jpg"
                 alt="me!"
-                width={350}
-                height={750}
+                width={"50"}
+                height={"50"}
                 />
 
                 <div className="ml-10 mr-70">
