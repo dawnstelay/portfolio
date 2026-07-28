@@ -25,7 +25,7 @@ export default function Design() {
         ? works
         : works.filter((p)=> p.tags.includes(active))
     return(
-       <main className="font-mono flex px-6">
+       <main className="font-urbanist min-h-200 w-full flex flex-col items-center justify-center p-10">
                    <div>
                        <h1 className="m-10 text-4xl font-zen font-bold text-left">Design works</h1>
                        <FilterBar
@@ -50,9 +50,10 @@ export default function Design() {
                                </div> 
                            ))}
                        </div>
-                               
-                       
                    </div>
+
+                   <div>big projects</div>
+                   <div>little designs</div>
                </main> 
                )
 }

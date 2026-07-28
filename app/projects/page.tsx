@@ -11,7 +11,7 @@ export default function Projects() {
     
     const tags = ["all", "animation", "brand design", "product design", "software dev", "visual dev"];
 
-    const projects = [
+    const projects = [ 
         {
             title: "Bite Me",
             image: "/banner.png",
@@ -45,13 +45,6 @@ export default function Projects() {
             image: "/banner.png",
             tags: ["brand design"],
             link: "/projects/perle"
-        },
-
-        {
-            title: "RPGPy",
-            image: "/banner.png",
-            tags: ["software dev"],
-            link: "/projects/rpgpy"
         },
 
         {

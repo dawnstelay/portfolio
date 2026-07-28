@@ -17,18 +17,17 @@ export default function ScrollUp() {
 
     const scrollToTop = () => {
         window.scrollTo({
-            top:0,
+            top: 0,
             behavior: "smooth"
         })
     }
 
-    return(
+    return (
         <div className="fixed bottom-0 right-0 m-8 pointer-events-auto font-dm_mono">
-            <div className={`transition-all duration-500 ${
-            visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
+            <div className={`transition-all duration-500 ${visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
                 <button onClick={scrollToTop}
-                className="flower pointer-events-auto bg-violet-200 text-orange-50 rounded-full font-mono shadow-lg hover:bg-indigo-300 transition">
-                ↑
+                    className="flower pointer-events-auto bg-violet-200 text-orange-50 rounded-full font-mono shadow-lg hover:bg-indigo-300 transition">
+                    ↑
                 </button>
             </div>
         </div>

@@ -1,86 +1,95 @@
 'use client'
 
-import Image from "next/image";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import clsx from "clsx";
+import { BiMenu, BiX } from "react-icons/bi";
 
 export default function Nav() {
-    const pathname= usePathname();
+    const [isVisible, setIsVisible] = useState(true);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const pathname = usePathname();
+
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const controlNavbar = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                setIsVisible(false);
+            } else {
+                setIsVisible(true);
+            }
+
+            lastScrollY = currentScrollY;
+        }
+
+        window.addEventListener("scroll", controlNavbar)
+        return () => window.removeEventListener("scroll", controlNavbar)
+
+    }, []);
+
+    const navLinks = [
+        { href: "/", label: "home" },
+        { href: "/dev", label: "dev" },
+        { href: "/design", label: "design" },
+        { href: "/art", label: "art" },
+        { href: "/about", label: "about" },
+    ];
+
+
     return (
-        <nav className="hidden sm:flex justify-center border-b border-dashed">
-        <div className="flex justify-between px-6 py-4 font-dm_mono">
-            
-
-            <ul className="text-xl m-4 flex flex-row items-center gap-2">
-                    <li> 
-                        <Link className="navunderlineanim"
-                        href="/">home</Link>
-                    </li>
-
-                    <li>
-                        <Link className={`${pathname === '/projects' ? 'text-violet-200' : ''} navunderlineanim`}
-                        href="/projects">projects</Link>
-                    </li>
-                    <li>
+        <nav className={`fixed w-full bg-white font-urbanist shadow-md transition-transform duration-300 z-50 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between h-20">
+                    <div className="flex items-center">
                         <Link href="/">
-                            <Image
-                                className="flex items-center"
-                                src="/logo.svg"
-                                alt="Logo"
-                                width={60}
-                                height={60}
-                            /> 
+                            <img className="aspect-auto object-contain max-w-full m-auto max-h-100" src="/logo.svg" alt="logo depicting girl" width="50" height="50" />
                         </Link>
-                    </li>
+                    </div>
 
-                    <li>
-                        <Link className={`${pathname === '/art' ? 'text-violet-200' : ''} navunderlineanim`}
-                        href="/art">art</Link>
-                    </li>
+                    <div className="hidden md:flex items-center space-x-8">
+                        {navLinks.map((link) => (
+                            <Link key={link.href} href={link.href}
+                                className={`text-gray-600 hover:text-violet-200 px-3 py-2 rounded-md font-semibold transition-colors ${pathname === link.href ? "text-purple-300" : ""}`} >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </div>
 
-                    <li>
-                        <Link className={`${pathname === '/about' ? 'text-violet-200' : ''} navunderlineanim`}
-                        href="/about">about</Link>
-                    </li>
-            </ul>
 
-            {/*}
-            <ul className="flex gap-2 items-center m-4">
-                
-                <a className="navunderlineanim" href="https://linkedin.com/in/dawniquecasteele" target="_blank">
-                    <Image
-                        className="flex"
-                        src="/linkedin.svg"
-                        alt="LinkedinLogo"
-                        width={20}
-                        height={20}
-                    />
-                </a>
-                <a className="navunderlineanim" href="https://github.com/dawniquecasteele" target="_blank">
-                    <Image
-                        className="flex"
-                        src="/github.svg"
-                        alt="GithubLogo"
-                        width={20}
-                        height={20}
-                    />
-                </a>
-                    
-                <a className="navunderlineanim" href="https://www.artstation.com/dawnstelay" target="_blank">
-                    <Image
-                        className="flex"
-                        src="/artstation.svg"
-                        alt="ArtstationLogo"
-                        width={20}
-                        height={20}
-                    />
-                </a>
-            </ul>
-            */}
-        
+                    <div className="md:hidden flex items-center">
+                        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-600
+                            hover:text-gray-900 hover-bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset
+                            focus:ring-violet-200">
+                            {!isMobileMenuOpen ? (
+                                <BiMenu className="text-3xl" />
+                            ) : (
+                                <BiX className="text-3xl" />
+                            )}
+                        </button>
+                    </div>
+                </div>
 
-        </div>
+                <div className={`md:hidden transition-all duration-300 ease-in-out 
+                        ${isMobileMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0 overflow-hidden"}`}>
+                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        {navLinks.map((link) => (
+                            <Link key={link.href} href={link.href} onClick={() =>
+                                setIsMobileMenuOpen(false)}
+                                className={`block px-3 py-2 rounded-md text-base font-medium 
+                                        ${pathname === link.href ? "text-violet-200 bg-blue-50" : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"}`}>
+                                {link.label}
+                            </Link>
+                        ))}
+                    </div>
+
+                </div>
+
+            </div>
         </nav>
     )
 }
+
