@@ -1,31 +1,22 @@
 import type { Metadata } from "next";
-import {DM_Mono, Zen_Kaku_Gothic_New, Dela_Gothic_One } from "next/font/google";
+import {DM_Mono, Urbanist } from "next/font/google";
 import "./globals.scss";
 import Nav from "../components/nav";
-import NavMobile from "../components/navmobile";
 import ScrollUp from "../components/scrollUp";
 import Footer from "../components/footer"
 import Loader from "../components/loader";
 import Transition from "../components/transition";
-import { CursorContextProvider } from "../components/cursorcontext";
-import Cursor from "../components/customcursor";
 
-const zen = Zen_Kaku_Gothic_New({
-  variable: "--font-zen-kaku-gothic-new",
+const urbanist = Urbanist({
+  variable: "--font-urbanist",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["100", "200", "300","400", "500","600", "700"],
 })
 
 const dm_mono = DM_Mono({
   variable: "--font-dm-mono",
   subsets: ["latin"],
   weight: ["300"],
-})
-
-const dela = Dela_Gothic_One({
-  variable: "--font-dela-gothic-one",
-  subsets: ["latin"],
-  weight:["400"],
 })
 
 
@@ -42,14 +33,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dm_mono.variable} ${zen.variable} ${dela.variable} antialiased min-h-screen`}
+        className={`${dm_mono.variable} ${urbanist.variable} antialiased`}
       >
         <Loader>
-        <CursorContextProvider>
-        <Cursor/>
+        
           <div>
           <Nav/>
-        <NavMobile/>
         <main>
           <Transition>
           {children}
@@ -59,7 +48,6 @@ export default function RootLayout({
             <Footer/>
             <ScrollUp/>
         </div>
-        </CursorContextProvider>
         </Loader>
         
       </body>

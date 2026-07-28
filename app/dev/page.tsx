@@ -5,64 +5,37 @@ import Image from "next/image";
 import Link from "next/link";
 import FilterBar from "../../components/filters";
 
-export default function Projects() {
-   
-    const [active, setActive] = useState("all")
+export default function Dev() {
     
-    const tags = ["all", "animation", "brand design", "product design", "software dev", "visual dev"];
+    const [active, setActive] = useState("all") 
+    
+    const tags = ["all", "app dev", "game dev", "shader"]
 
-    const projects = [ 
-        {
-            title: "Bite Me",
-            image: "/banner.png",
-            tags: ["animation", "visual dev"], 
-            link: "/projects/bite-me"
-        },
-
-        {
-            title: "Charm",
-            image: "/banner.png",
-            tags: ["brand design"],
-            link: "/projects/charm"
-        },
+    const projects = [
 
         {
             title: "CocoCoins",
             image: "/banner.png",
-            tags: ["product design", "software dev"],
+            tags: ["app dev"],
             link: "/projects/cococoins"
-        },
-
-        {
-            title: "Forget Me Not",
-            image: "/banner.png",
-            tags: ["visual dev"],
-            link: "/projects/fmn"
-        },
-
-        {
-            title: "Perle",
-            image: "/banner.png",
-            tags: ["brand design"],
-            link: "/projects/perle"
-        },
-
-        {
-            title: "Skin to Skin",
-            image: "/banner.png",
-            tags: ["product design"],
-            link: "/projects/skin-to-skin"
         },
 
         {
             title: "Smart Evaluator",
             image: "/banner.png",
-            tags: ["software dev"],
+            tags: ["app dev"],
             link: "/projects/smart-evaluator"
         },
-        
-    ]
 
+        {
+            title: "Minimax",
+            image: "/banner.png",
+            tags: ["game dev"],
+            link: "/"
+        }
+    ]
+    
+    
     const filtered = 
         active === "all"
         ? projects
@@ -70,7 +43,7 @@ export default function Projects() {
 
 
     return(
-        <main className="font-dm_mono px-6 flex">
+        <main className="font-urbanist min-h-200 w-full flex flex-col items-center justify-center p-10">
             <div>
             <h1 className="m-10 text-4xl font-zen font-bold text-left">ALL PROJECTS</h1>
             <FilterBar

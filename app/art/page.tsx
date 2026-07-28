@@ -5,7 +5,7 @@ import Image from "next/image";
 import ImageModal from "../../components/imagemodal";
 import FilterBar from '../../components/filters';
 
-export default function Art() {
+export default function Art() { 
     
     const [active, setActive] = useState("all")
 
@@ -35,7 +35,7 @@ export default function Art() {
 
 
     return(
-        <main className="font-mono flex px-6">
+        <main className="font-urbanist min-h-200 w-full flex flex-col items-center justify-center p-10">
             <div>
                 <h1 className="m-10 text-4xl font-zen font-bold text-left">Gallery</h1>
                 <FilterBar
