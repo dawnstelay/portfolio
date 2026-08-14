@@ -4,11 +4,11 @@ export default function About() {
     return (
         <main className="font-urbanist min-h-screen w-full flex flex-col items-center justify-center">
 
-            <section id="hero" className="min-h-200 w-full flex flex-row items-center ml-20 mr-20 p-50">
+            <section id="hero" className="min-h-200 w-full flex flex-row items-center ml-10 mr-20 p-50">
 
-                <img className="aspect-auto object-contain max-w-full m-auto max-h-100" src="/me.jpg" alt="image of myself" />
+                <img className="aspect-auto object-contain max-w-full m-auto max-h-100 rounded shadow-md" src="/idsquare.png" alt="image of myself" />
 
-                <div className="m-5">
+                <div className="m-5 ml-20">
                     <h1 className="text-8xl mb-2 text-semibold">hi again!</h1>
                     <p>My name is Dawniqueca (pronounced daw-nee-qua) and I'm
                         a freelance designer. I graduated from Kennesaw
