@@ -73,18 +73,6 @@ body {
 //**********************************************************************
 // HOMEPAGE CLASSES
 
-// Services
-
-.service-carousel {
-  margin: 100px auto;
- 
-  width: 100%;
-  display: flex;
-  overflow-x: auto;
-  gap: 1em;
-}
-
-
 // Projects
 
 .project-container {
@@ -176,15 +164,15 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1em;
-  animation: scrolling 10s infinite linear;
+  animation: scrolling 27s infinite linear;
   padding-right: 1em;
 }
 
 .carouselcard{
-  flex: 0 0 5em;
+  flex: 0 0 10em;
   height: 5em;
   padding: 1em;
-  background: cornflowerblue;
+  background: var(--moss);
   font-size: 3rem;
   border-radius: .2em;
   text-align: center;

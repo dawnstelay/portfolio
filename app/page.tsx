@@ -21,7 +21,7 @@ export default function Home() {
           <h3 className="text-xl mt-7">An Atlanta-based multidiscplinary designer, focusing on storytelling and interaction ⋆˚꩜｡</h3>
         </div>
         <div className=" justify-center mt-10 w-200">
-          <img className="aspect-auto object-contain max-w-full m-auto max-h-100" src="/hero-animation.png" />
+          <img className="aspect-auto object-contain max-w-full m-auto" src="/hero-animation.png" />
         </div>
 
         <div>
@@ -29,9 +29,54 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="gallery" className="min-h-200 w-full flex flex-col items-center">
+        <h3 className="text-center text-4xl font-zen">Gallery</h3>
+
+        <div className="carousel">
+          <div className="group">
+            <div className="carouselcard">1</div>
+            <div className="carouselcard">2</div>
+            <div className="carouselcard">3</div>
+            <div className="carouselcard">4</div>
+            <div className="carouselcard">5</div>
+            <div className="carouselcard">6</div>
+          </div>
+          <div aria-hidden className="group">
+            <div className="carouselcard">1</div>
+            <div className="carouselcard">2</div>
+            <div className="carouselcard">3</div>
+            <div className="carouselcard">4</div>
+            <div className="carouselcard">5</div>
+            <div className="carouselcard">6</div>
+          </div>
+        </div>
+      </section>
+
       <section id="services" className="scrollcontainer">
         
         
+      </section>
+
+      <section id="featured" className="min-h-screen w-full items-center text-center">
+       <h1 className="text-3xl"> featured projects</h1>
+       <div className=" grid grid-cols-1 md:grid-cols-2 m-20 gap-10">
+       
+        <div className="bg-red-100 m-2 p-10 h-100 rounded-md border-blackbean">
+          project 1
+        </div>
+
+        <div className="bg-red-100 m-2 p-10 h-100">
+          project 1
+        </div>
+
+         <div className="bg-red-100 m-2 p-10 h-100">
+          project 1
+        </div>
+
+         <div className="bg-red-100 m-2 p-10 h-100">
+          project 1
+        </div>
+        </div>
       </section>
 
 
@@ -84,28 +129,7 @@ export default function Home() {
       </section>
 
 
-      <section id="gallery" className="min-h-screen w-full flex flex-col items-center">
-        <h3 className="text-center text-4xl font-zen">Gallery</h3>
-
-        <div className="carousel">
-          <div className="group">
-            <div className="carouselcard">1</div>
-            <div className="carouselcard">2</div>
-            <div className="carouselcard">3</div>
-            <div className="carouselcard">4</div>
-            <div className="carouselcard">5</div>
-            <div className="carouselcard">6</div>
-          </div>
-          <div aria-hidden className="group">
-            <div className="carouselcard">1</div>
-            <div className="carouselcard">2</div>
-            <div className="carouselcard">3</div>
-            <div className="carouselcard">4</div>
-            <div className="carouselcard">5</div>
-            <div className="carouselcard">6</div>
-          </div>
-        </div>
-      </section>
+      
 
 
 
