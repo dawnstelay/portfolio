@@ -14,22 +14,19 @@ export default function Home() {
   return (
     <main className="font-urbanist min-h-screen w-full flex flex-col items-center justify-center">
 
-      <section id="hero" className="py-100 h-50 w-full flex items-center pl-10">
+      <section id="hero" className="py-90 h-50 max-w-full flex items-center ml-30 pl-10">
         <div className="flex flex-col items-center justify-center m-auto">
           <h3 className="text-xl mt-7 items-left ">HI, I'M</h3>
           <h1 className="lg:text-7xl text-4xl font-bold">dawniqueca steele</h1>
           <h3 className="text-xl mt-7">An Atlanta-based multidiscplinary designer, focusing on storytelling and interaction ⋆˚꩜｡</h3>
         </div>
         <div className=" justify-center mt-10 w-200">
-          <img className="aspect-auto object-contain max-w-full m-auto" src="/hero-animation.png" />
+          <img className="aspect-auto object-contain max-w-full m-auto max-h-300" src="/hero-animation.png" />
         </div>
-
-        <div>
-
-        </div>
+        
       </section>
 
-      <section id="gallery" className="min-h-200 w-full flex flex-col items-center">
+      <section id="gallery" className="min-h-120 w-full flex flex-col items-center">
         <h3 className="text-center text-4xl font-zen">Gallery</h3>
 
         <div className="carousel">
@@ -59,7 +56,7 @@ export default function Home() {
 
       <section id="featured" className="min-h-screen w-full items-center text-center">
        <h1 className="text-3xl"> featured projects</h1>
-       <div className=" grid grid-cols-1 md:grid-cols-2 m-20 gap-10">
+       <div className=" grid grid-cols-1 md:grid-cols-2 m-20 gap-10 mt-5">
        
         <div className="bg-red-100 m-2 p-10 h-100 rounded-md border-blackbean">
           project 1
@@ -81,7 +78,7 @@ export default function Home() {
 
 
       
-
+ {/*
 
       <section id="projects" className="min-h-screen w-full items-center text-center">
         <h1 className="text-3xl"> featured projects</h1>
@@ -128,11 +125,7 @@ export default function Home() {
 
       </section>
 
-
-      
-
-
-
+    */}
 
     </main>
 

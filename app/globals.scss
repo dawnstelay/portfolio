@@ -75,6 +75,7 @@ body {
 
 // Projects
 
+/*
 .project-container {
   width: 70%;
   margin: 0 auto;
@@ -144,11 +145,13 @@ body {
   align-items: center;
 }
 
+*/
 
 
 // Gallery
 .carousel {
   margin: 100px auto;
+  margin-top: 2em;
   width: 90%;
   display: flex;
   overflow-x: auto;
@@ -192,6 +195,7 @@ body {
 
 // scroll up
 .flower {  
+  background-color: var(--blackbean);
   width: 75px;
   --r: calc(50%/(1 + 1/sin(180deg/5))); 
   aspect-ratio: 1;
@@ -209,9 +213,13 @@ body {
 
 // footer mask
 .box {
+  background-color: var(--cornell);
+  color: var(--ivory);
   mask: 
     linear-gradient(180deg,#0000 30px,#000 0),
     radial-gradient(30px,#000 calc(100% - 1px),#0000) top/55.5px 60px
+
+
 }
 
 

@@ -52,7 +52,7 @@ export default function Nav() {
                     <div className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link) => (
                             <Link key={link.href} href={link.href}
-                                className={`text-gray-600 hover:text-violet-200 px-3 py-2 rounded-md font-semibold transition-colors ${pathname === link.href ? "text-purple-300" : ""}`} >
+                                className={`text-gray-600 hover:text-violet-200 px-3 py-2 rounded-md font-semibold transition-colors ${pathname === link.href ? "text-[purple-300]" : ""}`} >
                                 {link.label}
                             </Link>
                         ))}
