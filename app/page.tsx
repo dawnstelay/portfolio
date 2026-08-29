@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Card from "../components/card";
 import { useState } from "react";
 
 export default function Home() {
@@ -12,22 +11,22 @@ export default function Home() {
   const [active, setActive] = useState(false);
 
   return (
-    <main className="font-urbanist min-h-screen w-full flex flex-col items-center justify-center">
+    <main className="font-urbanist min-h-screen max-w-full flex flex-col items-center justify-center">
 
-      <section id="hero" className="py-90 h-50 max-w-full flex items-center ml-30 pl-10">
-        <div className="flex flex-col items-center justify-center m-auto">
+      <section id="hero" className="py-90 h-50 max-w-full flex items-center">
+        <div className="flex flex-col items-center justify-center m-10">
           <h3 className="text-xl mt-7 items-left ">HI, I'M</h3>
           <h1 className="lg:text-7xl text-4xl font-bold">dawniqueca steele</h1>
           <h3 className="text-xl mt-7">An Atlanta-based multidiscplinary designer, focusing on storytelling and interaction ⋆˚꩜｡</h3>
         </div>
         <div className=" justify-center mt-10 w-200">
-          <img className="aspect-auto object-contain max-w-full m-auto max-h-300" src="/hero-animation.png" />
+          <img className="aspect-auto object-contain m-auto" src="/hero-animation.png" />
         </div>
         
       </section>
 
       <section id="gallery" className="min-h-120 w-full flex flex-col items-center">
-        <h3 className="text-center text-4xl font-zen">Gallery</h3>
+        <h3 className="text-center text-4xl">Gallery</h3>
 
         <div className="carousel">
           <div className="group">
@@ -76,6 +75,10 @@ export default function Home() {
         </div>
       </section>
 
+
+    <section id="demo-reel" className="">
+
+    </section>
 
       
  {/*
