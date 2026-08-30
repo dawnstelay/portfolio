@@ -23,7 +23,7 @@ export default function ImageModal({
     return (
         <div>
             <Image
-                className="hover:scale-105 hover:border-dashed hover:border-amber-500 transition duration-300"
+                className="hover:scale-105 transition duration-300"
                 src={src}
                 alt={alt}
                 width={width}
@@ -32,7 +32,7 @@ export default function ImageModal({
             />
 
             {open && (
-                <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-6"
+                <div className="fixed inset-0 bg-black/55 flex items-center justify-center z-50 p-6"
                     onClick={() => setOpen(false)}>
                     <div className="relative max-w-4xl w-full"
                         onClick={(e) => e.stopPropagation()}>

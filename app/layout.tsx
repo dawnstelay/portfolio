@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import {Space_Mono, Funnel_Display, Momo_Signature } from "next/font/google";
+import { Space_Mono, Funnel_Display } from "next/font/google";
 import "./globals.scss";
 import Nav from "../components/nav";
 import ScrollUp from "../components/scrollUp";
 import Footer from "../components/footer"
 import Loader from "../components/loader";
 import Transition from "../components/transition";
+import localFont from "next/font/local";
 
 
 const space = Space_Mono({
@@ -19,10 +20,20 @@ const funnel = Funnel_Display({
   subsets: ["latin"],
 })
 
-const momo = Momo_Signature({
-  variable: "--font-momo-signature",
-  subsets: ["latin"],
-  weight: ["400"],
+
+const cozy = localFont({
+  variable: "--font-cozy-quill",
+  src: "../public/fonts/CozyQuill.woff2",
+})
+
+const kiwi = localFont({
+  variable: "--font-kiwi-soda",
+  src: "../public/fonts/KiwiSoda.woff2",
+})
+
+const emoji = localFont({
+  variable: "--font-pixel-emoji",
+  src: "../public/fonts/PixelEmoji.woff2"
 })
 
 
@@ -37,15 +48,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${momo.variable} ${funnel.variable} ${space.variable}`}>
+    <html lang="en" className={`${space.variable} ${funnel.variable} ${cozy.variable} ${kiwi.variable} ${emoji.variable}`}>
       <body
         className={`antialiased`}
       >
         <Loader>
         
-          <div>
+          <div className="background justify-center item-center">
           <Nav/>
-        <main>
+        <main className="overlay justify-center item-center">
           <Transition>
           {children}
           </Transition>

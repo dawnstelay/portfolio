@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
     return (
-        <main className="font-urbanist min-h-screen max-w-full flex flex-col items-center justify-center">
+        <main className="font-funnel min-h-screen max-w-full flex flex-col items-center justify-center">
 
         something
 
