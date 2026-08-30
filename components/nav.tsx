@@ -32,9 +32,9 @@ export default function Nav() {
 
     const navLinks = [
         { href: "/", label: "home" },
-        { href: "/dev", label: "dev" },
-        { href: "/design", label: "design" },
+        { href: "/projects", label: "projects" },
         { href: "/art", label: "art" },
+        { href: "/play", label: "play" },
         { href: "/about", label: "about" },
     ];
 

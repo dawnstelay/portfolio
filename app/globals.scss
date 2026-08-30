@@ -2,9 +2,11 @@
 @use 'sass:list';
 
 :root {
---font-dm_mono: var(--font-dm-mono);
---font-urbanist: var(--font-urbanist);
 
+// fonts
+--font-space: var(--font-space-mono);
+--font-funnel: var(--font-funnel-display);
+--font-momo: var(--font-momo-signature);
 
 
 //color-palette 
@@ -35,8 +37,8 @@ body {
   background-image: radial-gradient(rgb(186, 186, 186) 1px, transparent 0);
   background-size: 40px 40px;
   background-position: -19px -19px;
-  font-family: var(--font-dm-mono), 'Courier New', Courier, monospace;
-  font-family: var(--font-urbanist), 'Open Sans', sans-serif;
+  font-family: var(--font-space), 'Courier New', Courier, monospace;
+  font-family: var(--font-funnel), 'Open Sans', sans-serif;
 }
 
 

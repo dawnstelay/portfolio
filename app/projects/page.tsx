@@ -70,7 +70,7 @@ export default function Projects() {
 
 
     return(
-        <main className="font-dm_mono px-6 flex">
+        <main className="min-h-screen max-w-full flex flex-col items-center justify-center">
             <div>
             <h1 className="m-10 text-4xl font-zen font-bold text-left">ALL PROJECTS</h1>
             <FilterBar

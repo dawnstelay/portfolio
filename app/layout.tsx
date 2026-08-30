@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {DM_Mono, Urbanist } from "next/font/google";
+import {Space_Mono, Funnel_Display, Momo_Signature } from "next/font/google";
 import "./globals.scss";
 import Nav from "../components/nav";
 import ScrollUp from "../components/scrollUp";
@@ -7,16 +7,22 @@ import Footer from "../components/footer"
 import Loader from "../components/loader";
 import Transition from "../components/transition";
 
-const urbanist = Urbanist({
-  variable: "--font-urbanist",
+
+const space = Space_Mono({
+  variable: "--font-space-mono",
   subsets: ["latin"],
-  weight: ["100", "200", "300","400", "500","600", "700"],
+  weight: ["400", "700"],
 })
 
-const dm_mono = DM_Mono({
-  variable: "--font-dm-mono",
+const funnel = Funnel_Display({
+  variable: "--font-funnel-display",
   subsets: ["latin"],
-  weight: ["300"],
+})
+
+const momo = Momo_Signature({
+  variable: "--font-momo-signature",
+  subsets: ["latin"],
+  weight: ["400"],
 })
 
 
@@ -31,9 +37,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${momo.variable} ${funnel.variable} ${space.variable}`}>
       <body
-        className={`${dm_mono.variable} ${urbanist.variable} antialiased`}
+        className={`antialiased`}
       >
         <Loader>
         
