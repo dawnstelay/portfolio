@@ -54,7 +54,7 @@ export default function RootLayout({
       >
         <Loader>
         
-          <div className="background justify-center item-center">
+          <div className="dotted justify-center item-center">
           <Nav/>
         <main className="overlay justify-center item-center">
           <Transition>

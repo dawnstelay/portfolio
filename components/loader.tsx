@@ -31,7 +31,7 @@ export default function Loader({
     return (
         <>
             {loading && (
-                <div className={`font-cozy fixed inset-0 flex items-center justify-center bg-white z-50 transition-opacity duration-700 ${fadeOut ? "opacity-0" : "opacity-100"}`}>
+                <div className={`font-kiwi fixed inset-0 flex items-center justify-center bg-white z-50 transition-opacity duration-700 ${fadeOut ? "opacity-0" : "opacity-100"}`}>
                     <div className=" flex flex-col items-center space-y-6">
                         <div className="loader">
                         </div>
