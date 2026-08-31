@@ -21,7 +21,11 @@ export default function Footer() {
                 <a className="" href="mailto:dawniqsteele@gmail.com">
                     Email↗
                 </a>
+
+                
             </div>
+           
+           <p> &copy; code + design by dawniqueca steele </p>
 
 
         </div>

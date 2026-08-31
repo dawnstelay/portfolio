@@ -10,7 +10,7 @@ export default function Home() {
   const [tabOpen, setTabOpen] = useState(false);
 
   return (
-    <main className={"font-funnel min-h-screen max-w-full flex flex-col items-center justify-center"}>
+    <main className="font-funnel min-h-screen max-w-full flex flex-col items-center justify-center">
 
       <section id="hero" className="py-90 h-50 max-w-full flex items-center">
         <div className="flex flex-col items-center justify-center m-10">
@@ -62,25 +62,25 @@ export default function Home() {
 
 
 
-          <div className="projectCard m-2 p-10 h-100">
+          <div className="projectCard m-2 p-10 h-100 transition hover:scale-105">
             <h3 className="text-bold text-left m-2">CocoCoins</h3>
             <img className="" src="/banner.png" />
             <p className="m-2 text-left">descriptor blah blah blah</p>
           </div>
 
-          <div className="projectCard m-2 p-10 h-100">
+          <div className="projectCard m-2 p-10 h-100 transition hover:scale-105">
             <h3 className="text-bold text-left m-2">CocoCoins</h3>
             <img className="" src="/banner.png" />
             <p className="m-2 text-left">descriptor blah blah blah</p>
           </div>
 
-          <div className="projectCard m-2 p-10 h-100">
+          <div className="projectCard m-2 p-10 h-100 transition hover:scale-105">
             <h3 className="text-bold text-left m-2">CocoCoins</h3>
             <img className="" src="/banner.png" />
             <p className="m-2 text-left">descriptor blah blah blah</p>
           </div>
 
-          <div className="projectCard m-2 p-10 h-100">
+          <div className="projectCard m-2 p-10 h-100 transition hover:scale-105">
             <h3 className="text-bold text-left m-2">CocoCoins</h3>
             <img className="" src="/banner.png" />
             <p className="m-2 text-left">descriptor blah blah blah</p>

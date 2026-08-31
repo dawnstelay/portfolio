@@ -7,6 +7,7 @@ import Footer from "../components/footer"
 import Loader from "../components/loader";
 import Transition from "../components/transition";
 import localFont from "next/font/local";
+import MovingBG from "../components/movingBG";
 
 
 const space = Space_Mono({
@@ -50,13 +51,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${space.variable} ${funnel.variable} ${cozy.variable} ${kiwi.variable} ${emoji.variable}`}>
       <body
-        className={`antialiased`}
+        className={`antialiased -z-10`}
       >
         <Loader>
-        
-          <div className="dotted justify-center item-center">
+          <MovingBG />
+          <div className="justify-center item-center">
+            
+
           <Nav/>
-        <main className="overlay justify-center item-center">
+        <main className="overlay justify-center item-center relative z-10">
           <Transition>
           {children}
           </Transition>
@@ -65,6 +68,7 @@ export default function RootLayout({
             <Footer/>
             <ScrollUp/>
         </div>
+        
         </Loader>
         
       </body>

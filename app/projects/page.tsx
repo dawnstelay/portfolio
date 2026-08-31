@@ -71,8 +71,8 @@ export default function Projects() {
 
     return(
         <main className="font-funnel min-h-screen max-w-full flex flex-col items-center justify-center">
-            <div>
-            <h1 className="m-10 text-4xl font-zen font-bold text-left">ALL PROJECTS</h1>
+            <div className="py-20 max-w-full items-center m-5">
+            <h1 className="py-10 m-10 mb-2 text-6xl font-kiwi text-center">all projects</h1>
             <FilterBar
             tags={tags}
             active={active} 
@@ -81,7 +81,9 @@ export default function Projects() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filtered.map((project) => (
-                        <Link key={project.title} href={project.link}>
+                        <div key={project.title} className="projectCard m-2 p-10 h-100 transition hover:scale-105">
+
+                            <Link href={project.link}>
                     
 
                         <Image
@@ -89,12 +91,15 @@ export default function Projects() {
                             alt={project.title}
                             width={600}
                             height={400}
-                            className="rounded transition hover:scale-105"
+                            className="rounded"
                         />
 
                         <h3 className="mt-2 font-zen text-lg"> {project.title} </h3>
                         <p className="inline-block px-4 py-1 border rounded-full text-sm font-dm_mono bg-violet-200 lime-600 text-white">{project.tags}</p>
                         </Link>
+                            
+                            
+                        </div>
                     ))}
                 </div>   
             </div>

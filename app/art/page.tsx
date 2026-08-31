@@ -9,7 +9,7 @@ export default function Art() {
     
     const [active, setActive] = useState("all")
 
-    const tags = ["all", "studies", "characters", "illustrations", "environments", "3D"];
+    const tags = ["all", "studies", "characters", "illustrations", "environments", "3D", "2D animation"];
 
     const works = [
         {
@@ -36,8 +36,8 @@ export default function Art() {
 
     return(
         <main className="font-funnel min-h-200 w-full flex flex-col items-center justify-center p-10">
-            <div>
-                <h1 className="m-10 text-4xl font-zen font-bold text-left">Gallery</h1>
+            <div className="py-20 max-w-full items-center m-5">
+                <h1 className="py-10 m-10 mb-2 text-6xl font-kiwi text-center">Gallery</h1>
                 <FilterBar
                 tags={tags}
                 active={active}

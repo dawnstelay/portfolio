@@ -55,7 +55,7 @@ export default function About() {
                     </div>
 
                     <div className= "p-5 w-full bg-lime-50 shadow-md rounded mb-3">
-                        bad omens
+                        bad omens wayv
                     </div>
                     
                 </div>
