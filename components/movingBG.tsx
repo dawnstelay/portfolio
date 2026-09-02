@@ -51,9 +51,9 @@ export default function MovingBG() {
                             data-letter
                             data-x={x}
                             data-y={y}
-                            className="flex items-center justify-center font-emoji text-4xl font-bold text-(--ivory) rotate-[30deg]"
+                            className="flex items-center justify-center font-emoji text-2xl font-bold text-(--ivory) rotate-[30deg]"
                         >
-                            F
+                            a
                         </span>
                     );
                 })}
