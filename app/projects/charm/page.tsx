@@ -1,7 +1,7 @@
 export default function charm() {
     return(
         <div>
-            <main className="font-dm_mono width-100 justify-between">
+            <main className="font-funnel min-h-screen max-w-full flex flex-col items-center justify-center">
                 Charm Design
 
                 Brief: Charm believes there's more to tea than just tea! They know that tea is a way of relaxing and unwinding, 
@@ -16,10 +16,11 @@ export default function charm() {
                 Paper bag design
 
                 Suggested Colors:
-                #C4DEF9
-                #FFADBE 
-                #F4EBE4
-                #003B33                     
+                #B8A7B8
+                #FFF8DA
+                #C7D6C5
+                #4F604D    
+                #271C1C             
                                                                                                                                                
             </main>
         </div>

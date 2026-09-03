@@ -59,7 +59,7 @@ export default function RootLayout({
             
 
           <Nav/>
-        <main className="overlay justify-center item-center relative z-10">
+        <main className="overlay justify-center item-center relative">
           <Transition>
           {children}
           </Transition>
