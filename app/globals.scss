@@ -7,7 +7,7 @@
   --font-cozy: var(--font-cozy-quill);
   --font-kiwi: var(--font-kiwi-soda);
   --font-emoji: var(--font-pixel-emoji);
- 
+
 
 }
 
@@ -39,29 +39,26 @@
   }
 }
 
+
 .overlay {
   background: white;
   background-image: radial-gradient(rgb(186, 186, 186) 1px, transparent 0);
   background-size: 40px 40px;
   background-position: -19px -19px;
-  //font-family: var(--font-space), 'Courier New', Courier, monospace;
-  //font-family: var(--font-funnel), 'Open Sans', sans-serif;
   width: 90%;
-  justify-self: center;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
-  bottom: 0;
+  margin-inline: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  max-width: 100%;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
 }
 
-
-.dotted {
-  z-index: 0;
-  width: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255,0.9) 1.5px, transparent 1.6px), linear-gradient(to bottom, var(--sky) 0%, var(--ivory) 80%, #fff 100%);
-  background-size: 10px 10px, 100% 100%;
-  //mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 90%);
-  //-webkit-mask-image: linear-gradient(to bottom, black 0%, black 45%, transparent 90%);
+@media (min-width: 768px) {
+  .overlay {
+    padding: 2.5rem 2rem;
+  }
 }
-
 
 
 //**********************************************************************
@@ -135,9 +132,7 @@
   animation: fade-in-up 350ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.projectCard :hover {
-  
-}
+.projectCard :hover {}
 
 @keyframes fade-in-up {
   to {
@@ -146,14 +141,27 @@
   }
 }
 
-.projectCard:nth-child(1) { animation-delay: 0ms; }
-.projectCard:nth-child(2) { animation-delay: 120ms; }
-.projectCard:nth-child(3) { animation-delay: 180ms; }
-.projectCard:nth-child(4) { animation-delay: 240ms; }
-.projectCard:nth-child(5) { animation-delay: 300ms; }
+.projectCard:nth-child(1) {
+  animation-delay: 0ms;
+}
 
-@media (prefers-reduced-motion: reduce) 
-{
+.projectCard:nth-child(2) {
+  animation-delay: 120ms;
+}
+
+.projectCard:nth-child(3) {
+  animation-delay: 180ms;
+}
+
+.projectCard:nth-child(4) {
+  animation-delay: 240ms;
+}
+
+.projectCard:nth-child(5) {
+  animation-delay: 300ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
   .projectCard {
     animation: none;
     opacity: 1;
@@ -167,7 +175,7 @@
 // COMPONENT CLASSES
 
 .nav {
- background-color: var(--ivory);
+  background-color: var(--ivory);
   mask:
     linear-gradient(0deg, #0000 30px, #000 0),
     radial-gradient(30px, #000 calc(100% - 1px), #0000) bottom/50px 60px
@@ -207,7 +215,7 @@ mask: radial-gradient(100% 100%, #000 calc(var(--r)/tan(180deg/5)), #0000 0),
 }
 
 .links :hover {
-  color:var(--cornell);
+  color: var(--cornell);
 }
 
 
@@ -217,7 +225,7 @@ mask: radial-gradient(100% 100%, #000 calc(var(--r)/tan(180deg/5)), #0000 0),
   width: 120px;
   height: 22px;
   border-radius: 20px;
-  color:var(--blackbean);
+  color: var(--blackbean);
   border: 2px solid;
   position: relative;
   z-index: 100;

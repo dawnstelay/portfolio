@@ -1,64 +1,86 @@
 'use client'
 
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 
-export default function MovingBG() {
-    const containerRef = useRef<HTMLDivElement>(null);
+interface MovingBGProps {
+    letter?: string;
+    color?: string;
+    fontVar?: string;
+    size?: number;
+    speed?: number;
+}
+
+export default function MovingBG({
+    letter = "C",
+    color = "var(--blackbean, #facc15)",
+    fontVar = "var(--font-pixel-emoji), sans-serif",
+    size = 80,
+    speed = 25,
+}: MovingBGProps) {
+    const [bgDataUrl, setBgDataUrl] = useState<string>("");
 
     useEffect(() => {
-        const container = containerRef.current;
-        if (!container) return;
+        const tempEl = document.createElement("div");
+        tempEl.style.color = color;
+        tempEl.style.fontFamily = fontVar;
+        document.body.appendChild(tempEl);
 
-        const letters = container.querySelectorAll<HTMLElement>("[data-letter]");
+        const computedStyle = getComputedStyle(tempEl);
+        const resolvedColor = getComputedStyle(tempEl).color;
+        const resolvedFontFamily = computedStyle.fontFamily || "sans-serif";
+        document.body.removeChild(tempEl);
 
-        let animationID: number;
 
-        const animate = (time: number) => {
-            letters.forEach((letter) => {
-                const x = Number(letter.dataset.x);
-                const y = Number(letter.dataset.y);
 
-                //const wave = Math.sin( x * 0.3 + y * 0.4 + time * 0.0007);
-                //const xMove = Math.cos(x * 0.3 + y * 0.4 + time * 0.0007) * 10;
-                //const yMove = wave * 25;
-                //letter.style.transform = `translate(${xMove}px, ${yMove}px)`;
-                
-                
-                const wave = Math.sin(x * 0.35 + y * 0.25 + time * 0.0015) * 25;
-                letter.style.transform = `translateY(${ wave }px)`;
-            });
+        document.fonts.ready.then(() => {
+            const canvas = document.createElement("canvas");
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext("2d");
 
-            animationID = requestAnimationFrame(animate);
-        };
+            if (!ctx) return;
 
-        animationID = requestAnimationFrame(animate);
+            const half = size / 2;
+            const fontSize = Math.floor(size * 0.3);
 
-        return () => cancelAnimationFrame(animationID);
-    }, []);
+            ctx.fillStyle = resolvedColor || "#facc15";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.font = `${fontSize}px ${resolvedFontFamily}`;
 
-    const row = 12;
-    const col = 12;
+            // Draw two offset letters for the staggered diagonal pattern
+            ctx.fillText(letter, half / 2, half / 2);
+            ctx.fillText(letter, size - half / 2, size - half / 2);
+
+            setBgDataUrl(canvas.toDataURL());
+        });
+    }, [letter, color, fontVar, size]);
+
     return (
-        <div ref={containerRef} className="pointer-events-none fixed inset-0 bg-(--sky) overflow-hidden min-h-screen">
-            <div className="grid h-full w-full grid-cols-[repeat(12,1fr)]">
-                {Array.from({ length: row * col }).map((_, i) => {
-                    const x = i % col;
-                    const y = Math.floor(i / col);
+        <div
+            aria-hidden="true"
+            className="pointer-events-none fixed inset-0 -z-10  min-h-screen w-screen overflow-hidden bg-(--sky)"
+        >
+            <div
+                className="pointer-events-none absolute -inset-[100px] opacity-55"
+                style={{
+                    backgroundImage: bgDataUrl ? `url(${bgDataUrl})` : undefined,
+                    backgroundRepeat: "repeat",
+                    backgroundSize: `${size}px ${size}px`,
+                    animation: `movingLetterBg ${speed}s linear infinite`,
+                }}
+            />
 
-                    return (
-                        <span
-                            key={i}
-                            data-letter
-                            data-x={x}
-                            data-y={y}
-                            className="flex items-center justify-center font-emoji text-2xl font-bold text-(--ivory) rotate-[30deg]"
-                        >
-                            a
-                        </span>
-                    );
-                })}
-            </div>
-
+            <style jsx global>{`
+        @keyframes movingLetterBg {
+          from {
+            background-position: 0 0;
+          }
+          to {
+            background-position: -200px -200px;
+          }
+        }
+      `}</style>
         </div>
-    )
+    );
 }

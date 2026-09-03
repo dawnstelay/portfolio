@@ -51,26 +51,31 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${space.variable} ${funnel.variable} ${cozy.variable} ${kiwi.variable} ${emoji.variable}`}>
       <body
-        className={`antialiased -z-10`}
+        className={`relative min-h-screen w-full overflow-x-hidden antialiased`}
       >
-        <Loader>
-          <MovingBG />
-          <div className="justify-center item-center">
-            
+          <MovingBG
+            letter="a"
+            color="var(--ivory)"
+            fontVar="var(--font-pixel-emoji)"
+            speed={30} />
 
-          <Nav/>
-        <main className="overlay justify-center item-center relative">
-          <Transition>
-          {children}
-          </Transition>
-        </main>
-    
-            <Footer/>
-            <ScrollUp/>
-        </div>
-        
+            <Loader>
+          <div className="relative z-10 flex min-h-screen w-full flex-col items-center justify-between">
+
+
+            <Nav />
+            <main className="overlay relative min-h-[60vh] min-w-0 flex-1">
+              <Transition>
+                {children}
+              </Transition>
+            </main>
+
+            <Footer />
+            <ScrollUp />
+          </div>
+
         </Loader>
-        
+
       </body>
     </html>
   );
