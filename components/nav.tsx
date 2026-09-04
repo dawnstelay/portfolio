@@ -42,10 +42,10 @@ export default function Nav() {
     return (
         <nav className={`links nav fixed w-full bg-white font-space text-sm shadow-md transition-transform duration-300 z-50 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-20">
+                <div className="flex justify-between h-25">
                     <div className="flex items-center">
                         <Link href="/">
-                            <img className="aspect-auto object-contain max-w-full m-auto max-h-100" src="/logo.svg" alt="logo depicting girl" width="50" height="50" />
+                            <img className="aspect-auto object-contain max-w-full m-auto max-h-100 pb-2 transition-transform duration-200 hover:rotate-10 hover:scale-97" src="/applebear.svg" alt="logo depicting bear stuck in apple (my logo!)" width="50" height="50" />
                         </Link>
                     </div>
 

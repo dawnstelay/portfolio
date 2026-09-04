@@ -14,7 +14,7 @@ export default function Home() {
 
       <section id="hero" className="py-90 h-50 max-w-full flex items-center">
         <div className="flex flex-col items-center justify-center m-10">
-          <h3 className="font-kiwi text-2xl mt-7 text-left ">hi, I'm</h3>
+          <h3 className="font-cozy text-2xl mt-7 text-left ">hi, I'm</h3>
           <h1 className="lg:text-7xl text-4xl font-kiwi m-2">dawniqueca steele</h1>
           <h3 className="text-lg mt-7 font-space">An Atlanta-based multidiscplinary designer, focusing on storytelling and interaction ⋆˚꩜｡</h3>
         </div>

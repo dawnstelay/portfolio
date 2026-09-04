@@ -1,10 +1,11 @@
 'use client'
 
 import Link from "next/link";
+import ProjectNav from "../../../components/projectNav";
 
 export default function smartEvaluator(){
     return(
-        <main className="font-funnel min-h-screen max-w-full flex flex-col items-center justify-center">
+        <main className="font-funnel relative flex w-full flex-col items-center">
            
            <section id="overview" className="py-40 max-w-full items-center flex flex-row sm:flex-col">
             <div >
@@ -34,6 +35,8 @@ export default function smartEvaluator(){
                 </div>
             </div>
            </section>
+
+           <ProjectNav />
 
 
            <section id="problem" className="min-h-screen max-w-screen items-center text-center">
