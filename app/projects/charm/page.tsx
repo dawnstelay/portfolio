@@ -1,28 +1,103 @@
+'use client'
+
+import Link from "next/link";
+import ProjectNav from "../../../components/projectNav";
+
+const navSections = [
+    { id: "problem", label: "Problem" },
+    { id: "process", label: "Process" },
+    { id: "final", label: "Final" },
+    { id: "thoughts", label: "Thoughts" },
+];
+
 export default function Charm() {
-    return(
-        <div>
-            <main className="font-funnel min-h-screen max-w-full flex flex-col items-center justify-center">
-                Charm Design
+    return (
 
-                Brief: Charm believes there's more to tea than just tea! They know that tea is a way of relaxing and unwinding, 
-                which is why they've created a monthly subscription box for all the tea lovers out there. The box can be customized
-                to fit the neesds of their customers, and each month the customer gets a secret flavour to try out.
-                Charm wants their branding to feel relaxing, minimal, and unique.
-                
-                Deliverables:
-                Full Logo Suite 
-                Subscription Box Design
-                Businesss Cards 
-                Paper bag design
+        <main className="font-funnel relative flex w-full flex-col items-center">
 
-                Suggested Colors:
-                #B8A7B8
-                #FFF8DA
-                #C7D6C5
-                #4F604D    
-                #271C1C             
-                                                                                                                                               
-            </main>
-        </div>
+            <section id="hero" className="py-40 pb-10 max-w-full items-center flex flex-col">
+
+                <div className="p-5 pb-20 flex flex-col items-center overflow-hidden  w-[90%] ">
+                    <h1 className="text-6xl font-space m-2 text-(--blackbean)/75 text-center pb-4 pt-4">Charm</h1>
+                    <div>
+                        <p className="inline-block overflow-hidden rounded-lg bg-(--cornell) p-2 text-(--ivory) font-space text-sm">tags</p>
+                    </div>
+                </div>
+
+                <div className="w-[90%]">
+                    <img className="object-contain aspect-auto rounded-lg shadow-[0_10px_25px_rgba(0,0,0,0.18)] ring ring-(--blackbean)" src="/banner.png" />
+                </div>
+
+
+            </section>
+
+            <section id="overview" className="flex flex-row mt-0 p-5 pt-0 gap-10 pb-10">
+                <div>
+                    <div className="overflow-hidden p-2">
+                        <h3 className="text-bold text-xl text-(--cornell)">Tools</h3>
+                        <p className="text-md">React.js/Vite, Express.js, MongoDB, ChatGPT 4.0, ScrapingBee</p>
+
+                    </div>
+                    <div className="overflow-hidden p-2">
+                        <h3 className="text-bold text-xl text-(--cornell)">Deliverables</h3>
+                        <p className="text-md"> Web Application, Documentation, Pitch Deck</p>
+
+                    </div>
+                </div>
+
+                <div className="text-md">
+                    Charm Design
+
+                    Brief: Charm believes there's more to tea than just tea! They know that tea is a way of relaxing and unwinding,
+                    which is why they've created a monthly subscription box for all the tea lovers out there. The box can be customized
+                    to fit the neesds of their customers, and each month the customer gets a secret flavour to try out.
+                    Charm wants their branding to feel relaxing, minimal, and unique.
+
+                    Deliverables:
+                    Full Logo Suite
+                    Subscription Box Design
+                    Businesss Cards
+                    Paper bag design
+
+                    Suggested Colors:
+                    #B8A7B8
+                    #FFF8DA
+                    #C7D6C5
+                    #4F604D
+                    #271C1C
+
+                </div>
+
+
+
+            </section>
+
+            <ProjectNav
+                tags={navSections} />
+
+
+            <section id="problem" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">PROBLEM</h1>
+            </section>
+
+
+            <section id="res" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">RESEARCH</h1>
+            </section>
+
+            <section id="process" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">PROCESS</h1>
+            </section>
+
+            <section id="final" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">FINAL</h1>
+            </section>
+
+            <section id="final" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">THOUGHTS</h1>
+            </section>
+
+        </main>
+
     )
 }

@@ -1,29 +1,103 @@
+'use client'
+
+import Link from "next/link";
+import ProjectNav from "../../../components/projectNav";
+
+const navSections = [
+    { id: "problem", label: "Problem" },
+    { id: "process", label: "Process" },
+    { id: "final", label: "Final" },
+    { id: "thoughts", label: "Thoughts" },
+];
+
 export default function Perle() {
-    return(
-        <div>
-            <main className="font-dm_mono width-100 justify-between">
-                Perle 
 
-                Brief: Never have boring nails again! Perle saves you a trip to the salon, and 
-                allows you to create your own gel nails in the comfort of your home with their DIY gel kits.
-                Their brand is anything but stale, so make it creative, playful, and pretty!
+    return (
+        <main className="font-funnel relative flex w-full flex-col items-center">
 
-                target audience: 18-28 years old
-                location: global, perle ships worldwide
-                interests and hobbies: self-care, beauty, socail media, and going out
-                values: self confidence, flexibility, and authenticity
+            <section id="hero" className="py-40 pb-10 max-w-full items-center flex flex-col">
 
-                Deliverables:
-                Full logo suite 
-                Packaging design 
+                <div className="p-5 pb-20 flex flex-col items-center overflow-hidden  w-[90%] ">
+                    <h1 className="text-6xl font-space m-2 text-(--blackbean)/75 text-center pb-4 pt-4">Perle</h1>
+                    <div>
+                        <p className="inline-block overflow-hidden rounded-lg bg-(--cornell) p-2 text-(--ivory) font-space text-sm">Software Development</p>
+                    </div>
+                </div>
 
-                Suggested Color Palette
-                #EEAFDB
-                #D2D6F6 
-                #9C94C4 
-                #4F33A3 
-                
-            </main>
-        </div>
+                <div className="w-[90%]">
+                    <img className="object-contain aspect-auto rounded-lg shadow-[0_10px_25px_rgba(0,0,0,0.18)] ring ring-(--blackbean)" src="/banner.png" />
+                </div>
+
+
+            </section>
+
+            <section id="overview" className="flex flex-row mt-0 p-5 pt-0 gap-10 pb-10">
+                <div>
+                    <div className="overflow-hidden p-2">
+                        <h3 className="text-bold text-xl text-(--cornell)">Tools</h3>
+                        <p className="text-md">React.js/Vite, Express.js, MongoDB, ChatGPT 4.0, ScrapingBee</p>
+
+                    </div>
+                    <div className="overflow-hidden p-2">
+                        <h3 className="text-bold text-xl text-(--cornell)">Deliverables</h3>
+                        <p className="text-md"> Web Application, Documentation, Pitch Deck</p>
+
+                    </div>
+                </div>
+
+                <div className="text-md">
+                    Perle
+
+                    Brief: Never have boring nails again! Perle saves you a trip to the salon, and
+                    allows you to create your own gel nails in the comfort of your home with their DIY gel kits.
+                    Their brand is anything but stale, so make it creative, playful, and pretty!
+
+                    target audience: 18-28 years old
+                    location: global, perle ships worldwide
+                    interests and hobbies: self-care, beauty, socail media, and going out
+                    values: self confidence, flexibility, and authenticity
+
+                    Deliverables:
+                    Full logo suite
+                    Packaging design
+
+                    Suggested Color Palette
+                    #EEAFDB
+                    #D2D6F6
+                    #9C94C4
+                    #4F33A3
+                </div>
+
+
+
+            </section>
+
+            <ProjectNav
+                tags={navSections} />
+
+
+            <section id="problem" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">PROBLEM</h1>
+            </section>
+
+
+            <section id="res" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">RESEARCH</h1>
+            </section>
+
+            <section id="process" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">PROCESS</h1>
+            </section>
+
+            <section id="final" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">FINAL</h1>
+            </section>
+
+            <section id="final" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">THOUGHTS</h1>
+            </section>
+
+        </main>
+
     )
-}
+};
