@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function fmn() {
+export default function ForgetMeNot() {
     return(
         <main className="font-dm_mono width-100 justify-between">
             <a href="https://www.figma.com/proto/bLALJOqspBhWxFizv4sJcO/Forget-Me-Not-Pitch-Book?node-id=233-2&t=mqa3vVNfShNSo7IT-1"
