@@ -81,25 +81,19 @@ export default function Projects() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filtered.map((project) => (
-                        <div key={project.title} className="projectCard m-2 p-10 h-100 transition hover:scale-105">
+                        <Link href={project.link} key={project.title} className="projectCard m-2 p-10 transition hover:scale-105">
 
-                            <Link href={project.link}>
-                    
-
-                        <Image
-                            src={project.image}
-                            alt={project.title}
-                            width={600}
-                            height={400}
-                            className="rounded"
-                        />
+                            
+                            <img src={project.image} alt={project.title} className="rounded" />
+                        
 
                         <h3 className="mt-2 font-zen text-lg"> {project.title} </h3>
                         <p className="inline-block px-4 py-1 border rounded-full text-sm font-dm_mono bg-violet-200 lime-600 text-white">{project.tags}</p>
+                        
+                            
+                            
+                        
                         </Link>
-                            
-                            
-                        </div>
                     ))}
                 </div>   
             </div>

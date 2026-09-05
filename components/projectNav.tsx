@@ -46,7 +46,7 @@ export default function ProjectNav() {
                   onClick={() => scrollTo(sec.id)}
                   className="w-full text-left transition-colors hover:text-(--cornell) active:scale-95"
                 >
-                  ᝰ.ᐟ {sec.label}
+                  ᝰ {sec.label}
                 </button>
               </li>
             ))}

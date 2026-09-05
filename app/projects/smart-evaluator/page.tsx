@@ -3,63 +3,72 @@
 import Link from "next/link";
 import ProjectNav from "../../../components/projectNav";
 
-export default function smartEvaluator(){
-    return(
+export default function SmartEvaluator() {
+    return (
         <main className="font-funnel relative flex w-full flex-col items-center">
-           
-           <section id="overview" className="py-40 max-w-full items-center flex flex-row sm:flex-col">
-            <div >
-                <img className="object-contain aspect-auto" src="/banner.png" />
-            </div>
 
-            <div className="flex flex-col">
-                <h1 className="text-4xl font-space m-2 font-bold">SMART EVALUATOR</h1>
-                <div className="flex flex-row gap-10 m-7">
-                    <div className="w-[30%]">
-                        Project Type
-                        <p>◌ Software/Tool Development</p>
-                    </div>
-                    <div className="w-[30%]">
-                        Tools
-                        <p>◌ React.js/Vite</p>
-                        <p>◌ Express.js</p>
-                        <p>◌ MongoDB</p>
-                        <p>◌ ChatGPT4.0/ScrapingBee</p>
-                    </div>
-                    <div className="w-[30%]">
-                        Deliverables
-                        <p>◌ Web Application</p>
-                        <p>◌ Documentation</p>
-                        <p>◌ Pitch Deck</p>
+            <section id="hero" className="py-40 max-w-full items-center flex flex-col">
+
+                <div className="p-5 pb-20 flex flex-col items-center overflow-hidden  w-[90%] ">
+                    <h1 className="text-6xl font-space m-2 text-(--blackbean)/75 text-center pb-4 pt-4">Smart Evaluator</h1>
+                    <div>
+                        <p className="inline-block overflow-hidden rounded-lg bg-(--cornell) p-2 text-(--ivory) font-space text-sm">Software Development</p>
                     </div>
                 </div>
-            </div>
-           </section>
 
-           <ProjectNav />
-
-
-           <section id="problem" className="min-h-screen max-w-screen items-center text-center">
-            <h1 className="text-4xl font-space m-2">PROBLEM</h1>
-           </section>
+                <div className="w-[90%]">
+                    <img className="object-contain aspect-auto rounded-lg shadow-[0_10px_25px_rgba(0,0,0,0.18)] ring ring-(--blackbean)" src="/banner.png" />
+                </div>
 
 
-           <section id="research" className="min-h-screen max-w-screen items-center text-center">
-            <h1 className="text-4xl font-space m-2">RESEARCH</h1>
-           </section>
+            </section>
 
-           <section id="process" className="min-h-screen max-w-screen items-center text-center">
-            <h1 className="text-4xl font-space m-2">PROCESS</h1>
-           </section>
+            <section id="overview" className="flex flex-row mt-0 pt-0 gap-2">
+                <div>
+                    <div className="overflow-hidden p-2">
+                        <h3 className="text-bold text-2xl text-(--cornell)">Tools</h3>
+                        <p className="text-xl">React.js/Vite, Express.js, MongoDB, ChatGPT 4.0, ScrapingBee</p>
 
-           <section id="final" className="min-h-screen max-w-screen items-center text-center">
-            <h1 className="text-4xl font-space m-2">FINAL</h1>
-           </section>
+                    </div>
+                    <div className="overflow-hidden p-2">
+                        <h3 className="text-bold text-2xl text-(--cornell)">Deliverables</h3>
+                        <p className="text-xl"> Web Application, Documentation, Pitch Deck</p>
 
-           <section id="final" className="min-h-screen max-w-screen items-center text-center">
-            <h1 className="text-4xl font-space m-2">THOUGHTS</h1>
-           </section>
-          
+                    </div>
+                </div>
+
+                <div>
+                    Here is a bunch of words that help you get a gist of this silly project lol
+                </div>
+
+
+
+            </section>
+
+            <ProjectNav />
+
+
+            <section id="problem" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">PROBLEM</h1>
+            </section>
+
+
+            <section id="research" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">RESEARCH</h1>
+            </section>
+
+            <section id="process" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">PROCESS</h1>
+            </section>
+
+            <section id="final" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">FINAL</h1>
+            </section>
+
+            <section id="final" className="min-h-screen max-w-screen items-center text-center">
+                <h1 className="text-4xl font-space m-2">THOUGHTS</h1>
+            </section>
+
         </main>
     );
 }
