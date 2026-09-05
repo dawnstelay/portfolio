@@ -2,15 +2,12 @@
 
 import { useState } from "react";
 
-const navSections = [
-  { id: "problem", label: "Problem" },
-  { id: "research", label: "Research" },
-  { id: "process", label: "Process" },
-  { id: "final", label: "Final" },
-  { id: "thoughts", label: "Thoughts" },
-];
 
-export default function ProjectNav() {
+export default function ProjectNav({
+  tags,
+}: {
+  tags: { id: string; label: string; }[]
+}) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const scrollTo = (id: string) => {
@@ -24,13 +21,12 @@ export default function ProjectNav() {
   return (
     <>
       <div
-        className={`fixed top-1/3 z-40 flex items-center transition-transform duration-300 md:hidden ${
-          mobileOpen ? "translate-x-0" : "-translate-x-[calc(100%-2.5rem)]"
-        } left-0`}
+        className={`fixed top-1/3 z-40 flex items-center transition-transform duration-300 md:hidden ${mobileOpen ? "translate-x-0" : "-translate-x-[calc(100%-2.5rem)]"
+          } left-0`}
       >
-        
+
         <div className="relative w-44 rounded-r-lg bg-(--ivory) p-4 text-(--blackbean) shadow-xl ring-1 ring-(--sky)/50">
-          
+
           <div className="absolute -top-3 right-4 h-6 w-6 rounded-full bg-(--cornell) shadow-md ring-2 ring-rose-700">
             <div className="absolute top-1 left-1 h-2 w-2 rounded-full bg-(--ivory)/70" />
           </div>
@@ -39,14 +35,14 @@ export default function ProjectNav() {
             Sections
           </p>
           <ul className="space-y-2 font-cozy text-sm font-medium">
-            {navSections.map((sec) => (
-              <li key={sec.id}>
+            {tags.map((tag) => (
+              <li key={tag.id}>
                 <button
                   type="button"
-                  onClick={() => scrollTo(sec.id)}
+                  onClick={() => scrollTo(tag.id)}
                   className="w-full text-left transition-colors hover:text-(--cornell) active:scale-95"
                 >
-                  ᝰ {sec.label}
+                  ᝰ {tag.label}
                 </button>
               </li>
             ))}
@@ -63,7 +59,7 @@ export default function ProjectNav() {
         </button>
       </div>
 
-  
+
 
 
 
@@ -73,27 +69,27 @@ export default function ProjectNav() {
         <div
           className="pointer-events-auto relative -left-10 w-48 -rotate-2 rounded-lg bg-(--ivory) p-5 text-(--blackbean) shadow-[0_10px_25px_rgba(0,0,0,0.18)] ring-1 ring-(--sky) transition-transform duration-200 hover:rotate-0"
         >
-          
+
           <div className="absolute -top-3.5 left-1/2 h-7 w-7 -translate-x-1/2 rounded-full bg-(--cornell) shadow-[0_4px_6px_rgba(0,0,0,0.3)] ring-2 ring-rose-700">
             <div className="absolute top-1 left-1.5 h-2 w-2 rounded-full bg-(--ivory)/80"></div>
           </div>
 
-          
+
           <p className="mb-2 font-space text-xs font-bold uppercase tracking-widest text-(--cornell)">
             Navigation
           </p>
           <ul className="space-y-2 font-cozy text-base bg-(--ivory) p-5 ring-1 ring-(--sky) rounded-lg shadow-[0_10px_25px_rgba(0,0,0,0.18)]">
-            {navSections.map((sec) => (
-              <li key={sec.id}>
+            {tags.map((tag) => (
+              <li key={tag.id}>
                 <button
                   type="button"
-                  onClick={() => scrollTo(sec.id)}
+                  onClick={() => scrollTo(tag.id)}
                   className="group flex w-full items-center gap-1.5 text-left text-(--blackbean) transition-colors hover:text-(--cornell)"
                 >
                   <span className="text-xs transition-transform group-hover:translate-x-1">
-                   ⤷
+                    ⤷
                   </span>
-                  {sec.label}
+                  {tag.label}
                 </button>
               </li>
             ))}
