@@ -19,7 +19,7 @@ export default function SkinToSkin() {
                 <div className="p-5 pb-20 flex flex-col items-center overflow-hidden  w-[90%] ">
                     <h1 className="text-6xl font-space m-2 text-(--blackbean)/75 text-center pb-4 pt-4">Skin to Skin</h1>
                     <div>
-                        <p className="inline-block overflow-hidden rounded-lg bg-(--cornell) p-2 text-(--ivory) font-space text-sm">Software Development</p>
+                        <p className="inline-block overflow-hidden rounded-lg bg-(--cornell) p-2 text-(--ivory) font-space text-sm">Product Design</p>
                     </div>
                 </div>
 

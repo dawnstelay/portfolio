@@ -87,8 +87,17 @@ export default function Projects() {
                             <img src={project.image} alt={project.title} className="rounded" />
                         
 
-                        <h3 className="mt-2 font-zen text-lg"> {project.title} </h3>
-                        <p className="inline-block px-4 py-1 border rounded-full text-sm font-dm_mono bg-violet-200 lime-600 text-white">{project.tags}</p>
+                        <h3 className="mt-2 font-funnel text-lg"> {project.title} </h3>
+                        <div className="mt-2 flex flex-wrap gap-2">
+                                {project.tags.map((tag) => (
+                                    <span 
+                                        key={tag}
+                                        className="inline-block px-3 py-1 border border-(--blackbean) rounded-full text-xs font-space bg-(--cornell) text-(--ivory)"
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
                         
                             
                             
