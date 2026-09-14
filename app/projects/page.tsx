@@ -6,16 +6,16 @@ import Link from "next/link";
 import FilterBar from "../../components/filters";
 
 export default function Projects() {
-   
+
     const [active, setActive] = useState("all")
-    
+
     const tags = ["all", "animation", "brand design", "product design", "software dev", "visual dev"];
 
-    const projects = [ 
+    const projects = [
         {
             title: "Bite Me",
             image: "/banner.png",
-            tags: ["animation", "visual dev"], 
+            tags: ["animation", "visual dev"],
             link: "/projects/bite-me"
         },
 
@@ -60,37 +60,37 @@ export default function Projects() {
             tags: ["software dev"],
             link: "/projects/smart-evaluator"
         },
-        
+
     ]
 
-    const filtered = 
+    const filtered =
         active === "all"
-        ? projects
-        : projects.filter((p)=> p.tags.includes(active))
+            ? projects
+            : projects.filter((p) => p.tags.includes(active))
 
 
-    return(
+    return (
         <main className="font-funnel min-h-screen max-w-full flex flex-col items-center justify-center">
             <div className="py-20 max-w-full items-center m-5">
-            <h1 className="py-10 m-10 mb-2 text-6xl font-kiwi text-center">all projects</h1>
-            <FilterBar
-            tags={tags}
-            active={active} 
-            setActive={setActive}
-            />
+                <h1 className="py-10 m-10 mb-2 text-6xl font-kiwi text-center">all projects</h1>
+                <FilterBar
+                    tags={tags}
+                    active={active}
+                    setActive={setActive}
+                />
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filtered.map((project) => (
-                        <Link href={project.link} key={project.title} className="projectCard m-2 p-10 transition hover:scale-105">
+                        <div key={project.title} className="projectCard m-2 p-10 transition hover:scale-105">
 
-                            
+
                             <img src={project.image} alt={project.title} className="rounded" />
-                        
 
-                        <h3 className="mt-2 font-funnel text-lg"> {project.title} </h3>
-                        <div className="mt-2 flex flex-wrap gap-2">
+
+                            <h3 className="mt-2 font-funnel text-lg"> {project.title} </h3>
+                            <div className="mt-2 flex flex-wrap gap-2">
                                 {project.tags.map((tag) => (
-                                    <span 
+                                    <span
                                         key={tag}
                                         className="inline-block px-3 py-1 border border-(--blackbean) rounded-full text-xs font-space bg-(--cornell) text-(--ivory)"
                                     >
@@ -98,15 +98,22 @@ export default function Projects() {
                                     </span>
                                 ))}
                             </div>
-                        
-                            
-                            
-                        
-                        </Link>
+
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="mt-4 inline-block underline underline-offset-4"
+                            >
+                                View project →
+                            </a>
+
+
+                        </div>
                     ))}
-                </div>   
+                </div>
             </div>
         </main>
-    
+
     )
 }

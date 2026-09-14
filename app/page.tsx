@@ -4,10 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+const tabs = ["favorites", "dev", "design", "art"];
+const projects = [
+  {
+    id: 1,
+    title: "CocoCoins",
+    description: "beach themed financial tracker.",
+    image: "/banner.png",
+    categories: ["favorites", "dev"],
+    link: "/projects/cococoins",
+  },
+]
+
 export default function Home() {
 
-  const [active, setActive] = useState(false);
-  const [tabOpen, setTabOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("favorites");
+  const visibleProjects = projects.filter((project) => project.categories.includes(activeTab));
 
   return (
     <main className="font-funnel min-h-screen max-w-full flex flex-col items-center justify-center">
@@ -51,43 +63,66 @@ export default function Home() {
         
         <h1 className="text-3xl"> featured projects</h1>
         
-        <div className="grid grid-cols-1 md:flex gap-3 items-center justify-center ">
-          <button className="bg-(--sky) pl-10 pr-10 w-10">favorites</button>
-          <button className="bg-(--sky) pl-10 pr-10">dev</button>
-          <button className="bg-(--sky) pl-10 pr-10">design</button>
-          <button className="bg-(--sky) pl-10 pr-10">art</button>
+        <div
+        className="mt-8 flex flex-wrap items-center justify-center gap-3"
+        role="tablist"
+        aria-label="Project categories"
+      >
+        {tabs.map((tab) => {
+          const isActive = activeTab === tab;
 
-        </div>
-        <div className=" grid grid-cols-1 md:grid-cols-2 m-20 gap-10 mt-5">
+          return (
+            <button
+              key={tab}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => setActiveTab(tab)}
+              className={`rounded-lg px-10 py-2 transition ${
+                isActive
+                  ? "bg-(--cornell) text-(--ivory)"
+                  : "bg-(--ivory) hover:bg-(--cornell)/75 text-(--blackbean) hover:scale-105"
+              }`}
+            >
+              {tab}
+            </button>
+          );
+        })}
+      </div>
 
+      <div
+        role="tabpanel"
+        className="mx-auto mt-8 grid max-w-6xl grid-cols-1 gap-10 md:grid-cols-2"
+      >
+        {visibleProjects.length > 0 ? (
+          visibleProjects.map((project) => (
+            <div key={project.id} className="projectCard overflow-hidden p-6 text-left transition hover:scale-105">
+              <h3 className="mb-3 text-xl font-bold">{project.title}</h3>
 
+              <img
+                src={project.image}
+                alt={`${project.title} project preview`}
+                className="h-56 w-full rounded-lg object-cover"
+              />
 
-          <div className="projectCard m-2 p-10 h-100 transition hover:scale-105">
-            <h3 className="text-bold text-left m-2">CocoCoins</h3>
-            <img className="" src="/banner.png" />
-            <p className="m-2 text-left">descriptor blah blah blah</p>
-          </div>
+              <p className="mt-4">{project.description}</p>
 
-          <div className="projectCard m-2 p-10 h-100 transition hover:scale-105">
-            <h3 className="text-bold text-left m-2">CocoCoins</h3>
-            <img className="" src="/banner.png" />
-            <p className="m-2 text-left">descriptor blah blah blah</p>
-          </div>
-
-          <div className="projectCard m-2 p-10 h-100 transition hover:scale-105">
-            <h3 className="text-bold text-left m-2">CocoCoins</h3>
-            <img className="" src="/banner.png" />
-            <p className="m-2 text-left">descriptor blah blah blah</p>
-          </div>
-
-          <div className="projectCard m-2 p-10 h-100 transition hover:scale-105">
-            <h3 className="text-bold text-left m-2">CocoCoins</h3>
-            <img className="" src="/banner.png" />
-            <p className="m-2 text-left">descriptor blah blah blah</p>
-          </div>
-
-
-        </div>
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-block underline underline-offset-4"
+                >
+                  View project →
+                </a>
+              )}
+            </div>
+          ))
+        ) : (
+          <p className="md:col-span-2"> No projects in this category yet.</p>
+        )}
+      </div>
       </section>
 
 

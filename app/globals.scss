@@ -121,11 +121,11 @@
 }
 
 .projectCard {
-  background-color: var(--ivory);
+  background-color: #fffefc;
   padding: 16px;
   margin-bottom: 10px;
-  border: dashed 1.5px var(--blackbean);
-  border-radius: 8px;
+  border: solid 1px var(--sky);
+  border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   opacity: 0;
   transform: translateY(12px);
