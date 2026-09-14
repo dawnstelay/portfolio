@@ -105,6 +105,17 @@ export default function Home() {
                 className="h-56 w-full rounded-lg object-cover"
               />
 
+              <div className="mt-2 flex flex-wrap gap-2">
+                                {project.categories.map((category) => (
+                                    <span
+                                        key={category}
+                                        className="inline-block px-3 py-1 border border-(--blackbean) rounded-full text-xs font-space bg-(--cornell) text-(--ivory)"
+                                    >
+                                        {category}
+                                    </span>
+                                ))}
+                            </div>
+
               <p className="mt-4">{project.description}</p>
 
               {project.link && (

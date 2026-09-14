@@ -79,9 +79,9 @@ export default function Projects() {
                     setActive={setActive}
                 />
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="mx-auto mt-8 grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-3">
                     {filtered.map((project) => (
-                        <div key={project.title} className="projectCard m-2 p-10 transition hover:scale-105">
+                        <div key={project.title} className="projectCard overflow-hidden p-6 text-left transition hover:scale-105">
 
 
                             <img src={project.image} alt={project.title} className="rounded" />
