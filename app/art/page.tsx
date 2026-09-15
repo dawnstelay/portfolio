@@ -70,7 +70,7 @@ export default function Art() {
     return (
         <main className="font-funnel min-h-200 w-full flex flex-col items-center justify-center p-10">
             <div className="py-20 max-w-full items-center m-5">
-                <h1 className="py-10 m-10 mb-2 text-6xl font-kiwi text-center">Gallery</h1>
+                <h1 className="py-10 m-10 mb-2 text-6xl font-kiwi text-center text-(--blackbean)">Gallery</h1>
                 <FilterBar
                     tags={tags}
                     active={active}

@@ -169,6 +169,45 @@
 
 }
 
+//**********************************************************************
+// PLAYGROUND CLASSES
+
+.playground-grid .react-grid-item {
+  transition: transform 180ms ease-out;
+}
+
+.playground-grid .react-grid-item.react-grid-placeholder {
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--sky) 45%, transparent);
+  opacity: 0.55;
+}
+
+.playground-grid .react-grid-item > .react-resizable-handle {
+  right: 7px;
+  bottom: 7px;
+  width: 18px;
+  height: 18px;
+  border-right: 3px solid var(--blackbean);
+  border-bottom: 3px solid var(--blackbean);
+  border-radius: 0 0 5px 0;
+  background: none;
+  opacity: 0.72;
+}
+
+.playground-grid .react-grid-item > .react-resizable-handle::after {
+  display: none;
+}
+
+.playground-grid .react-grid-item:hover > .react-resizable-handle {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .playground-grid .react-grid-item > .react-resizable-handle {
+    width: 22px;
+    height: 22px;
+  }
+}
 
 //**********************************************************************
 // COMPONENT CLASSES
