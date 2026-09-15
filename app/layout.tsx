@@ -8,6 +8,7 @@ import Loader from "../components/loader";
 import Transition from "../components/transition";
 import localFont from "next/font/local";
 import MovingBG from "../components/movingBG";
+import CustomCursor from "../components/customCursor";
 
 
 const space = Space_Mono({
@@ -67,6 +68,7 @@ export default function RootLayout({
             <main className="overlay relative min-h-[60vh] min-w-0 flex-1">
               <Transition>
                 {children}
+                <CustomCursor />
               </Transition>
             </main>
 
