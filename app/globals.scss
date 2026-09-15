@@ -182,7 +182,7 @@
   opacity: 0.55;
 }
 
-.playground-grid .react-grid-item > .react-resizable-handle {
+.playground-grid .react-grid-item>.react-resizable-handle {
   right: 7px;
   bottom: 7px;
   width: 18px;
@@ -194,16 +194,16 @@
   opacity: 0.72;
 }
 
-.playground-grid .react-grid-item > .react-resizable-handle::after {
+.playground-grid .react-grid-item>.react-resizable-handle::after {
   display: none;
 }
 
-.playground-grid .react-grid-item:hover > .react-resizable-handle {
+.playground-grid .react-grid-item:hover>.react-resizable-handle {
   opacity: 1;
 }
 
 @media (max-width: 640px) {
-  .playground-grid .react-grid-item > .react-resizable-handle {
+  .playground-grid .react-grid-item>.react-resizable-handle {
     width: 22px;
     height: 22px;
   }
@@ -323,17 +323,17 @@ mask: radial-gradient(100% 100%, #000 calc(var(--r)/tan(180deg/5)), #0000 0),
 }
 
 // Cursor
-@media (pointer: fine) {
-  html,
-  body,
-  a,
-  button,
-  input,
-  textarea,
-  select {
-    cursor: none !important;
-  }
-}
+//@media (pointer: fine) {
+//  html,
+//  body,
+//  a,
+//  button,
+// input,
+//  textarea,
+//  select {
+//    cursor: none !important;
+//  }
+//}
 
 .custom-cursor {
   opacity: 0;
@@ -390,10 +390,53 @@ mask: radial-gradient(100% 100%, #000 calc(var(--r)/tan(180deg/5)), #0000 0),
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .custom-cursor,
   .custom-cursor-arrow,
   .custom-cursor-circle {
     transition: none;
     animation: none;
+  }
+}
+
+// Muuri Board
+
+.muuri-grid {
+  position: relative;
+  width: 100%;
+}
+
+.muuri-item {
+  position: absolute;
+  margin: 0 12px 24px;
+  z-index: 1;
+  touch-action: none;
+}
+
+.muuri-item.muuri-item-dragging,
+.muuri-item.is-resizing {
+  z-index: 30;
+}
+
+.muuri-item.muuri-item-releasing {
+  z-index: 20;
+}
+
+.muuri-item.muuri-item-hidden {
+  z-index: 0;
+}
+
+.muuri-item-content {
+  position: relative;
+}
+
+.muuri-item.is-resizing {
+  transition: none !important;
+}
+
+@media (max-width: 640px) {
+  .muuri-item {
+    width: calc(100% - 24px) !important;
+    margin: 0 12px 20px;
   }
 }

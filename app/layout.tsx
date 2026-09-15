@@ -68,7 +68,7 @@ export default function RootLayout({
             <main className="overlay relative min-h-[60vh] min-w-0 flex-1">
               <Transition>
                 {children}
-                <CustomCursor />
+                {/* <CustomCursor /> */}
               </Transition>
             </main>
 

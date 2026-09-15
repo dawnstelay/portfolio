@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import ImageModal from "../../components/imagemodal";
+import GalleryModal from "../../components/galleryModal";
 import FilterBar from '../../components/filters';
 
 type Artwork = {
@@ -100,15 +100,15 @@ export default function Art() {
 
 
             {selectedIndex !== null && filtered[selectedIndex] && (
-  <ImageModal
-    work={filtered[selectedIndex]}
-    currentIndex={selectedIndex}
-    totalImages={filtered.length}
-    onClose={closeModal}
-    onPrevious={showPrevious}
-    onNext={showNext}
-  />
-)}
+                <GalleryModal
+                    work={filtered[selectedIndex]}
+                    currentIndex={selectedIndex}
+                    totalImages={filtered.length}
+                    onClose={closeModal}
+                    onPrevious={showPrevious}
+                    onNext={showNext}
+                />
+            )}
         </main>
     )
 }
