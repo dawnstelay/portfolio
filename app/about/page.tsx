@@ -4,7 +4,30 @@ export default function About() {
     return (
         <main className="font-funnel min-h-screen max-w-full flex flex-col items-center justify-center">
 
-        something
+        <div id="notebook" className="flex flex-row gap-5 bg-red-500 h-125 w-175 justify-between items-center -rotate-5">
+
+            <div id="leftPage" className="bg-blue-500 h-110 w-80">
+
+            </div>
+
+            <div id="right Page" className="bg-green-500  h-110 w-80">
+
+            </div>
+        </div>
+
+        <div id="libraryCard" className="">
+            
+        </div>
+
+        <div id="mp3" className="">
+
+        </div>
+
+        <div id="gameconsole" className="">
+
+        </div>
+
+
 
 
 
