@@ -180,13 +180,13 @@ export default function MuuriBoard({ images }: MuuriBoardProps) {
             <div className="relative">
               <button
                 type="button"
-                className="drag-handle mb-2 block h-7 w-full cursor-grab rounded-full bg-[var(--blackbean)]/10 transition hover:bg-[var(--blackbean)]/20 active:cursor-grabbing"
+                className="drag-handle block top-1 h-6 w-full cursor-grab transition active:cursor-grabbing"
                 aria-label={`Drag ${image.alt}`}
               >
-                <span
-                  aria-hidden="true"
-                  className="mx-auto block h-1 w-10 rounded-full bg-[var(--blackbean)]/45"
-                />
+                <div
+                aria-hidden="true"
+                className={`pointer-events-none absolute left-1/2 z-10 h-6 w-24 -translate-x-1/2 -rotate-2 opacity-80 shadow-sm bg-(--blackbean)`}
+              />
               </button>
 
               <ImageModal
@@ -200,7 +200,7 @@ export default function MuuriBoard({ images }: MuuriBoardProps) {
 
               <button
                 type="button"
-                className="resize-handle absolute -bottom-3 -right-3 z-20 grid h-10 w-10 cursor-se-resize place-items-center rounded-full border-2 border-[var(--blackbean)] bg-[var(--ivory)] shadow-[3px_3px_0_var(--blackbean)] transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[var(--sky)]"
+                className="resize-handle absolute -bottom-3 -right-3 z-20 grid h-10 w-10 cursor-se-resize place-items-center rounded-full transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[var(--sky)]"
                 aria-label={`Resize ${image.alt}`}
               >
                 <span

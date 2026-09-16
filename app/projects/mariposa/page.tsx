@@ -73,7 +73,7 @@ export default function Mariposa() {
                 <h1 className="text-4xl font-space m-2">FINAL</h1>
             </section>
 
-            <section id="final" className="min-h-screen max-w-screen items-center text-center">
+            <section id="thoughts" className="min-h-screen max-w-screen items-center text-center">
                 <h1 className="text-4xl font-space m-2">THOUGHTS</h1>
             </section>
 

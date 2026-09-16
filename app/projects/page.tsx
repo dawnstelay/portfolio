@@ -70,9 +70,9 @@ export default function Projects() {
 
 
     return (
-        <main className="font-funnel min-h-screen max-w-full flex flex-col items-center justify-center">
-            <div className="py-20 max-w-full items-center m-5">
-                <h1 className="py-10 m-10 mb-2 text-6xl font-kiwi text-center">all projects</h1>
+        <main className="py-20 font-funnel min-h-full max-w-full">
+            <div className="mx-auto max-w-7xl">
+                <h1 className="py-10 m-10 mb-5 text-6xl font-kiwi text-center text-(--blackbean)">All Projects</h1>
                 <FilterBar
                     tags={tags}
                     active={active}
@@ -80,37 +80,41 @@ export default function Projects() {
                 />
 
                 <div className="mx-auto mt-8 grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-3">
-                    {filtered.map((project) => (
-                        <div key={project.title} className="projectCard overflow-hidden p-6 text-left transition hover:scale-105">
+                    {filtered.length > 0 ? (
+                        filtered.map((project) => (
+                            <div key={project.title} className="projectCard overflow-hidden p-6 text-left transition hover:scale-105">
 
 
-                            <img src={project.image} alt={project.title} className="rounded" />
+                                <img src={project.image} alt={project.title} className="rounded" />
 
 
-                            <h3 className="mt-2 font-funnel text-lg"> {project.title} </h3>
-                            <div className="mt-2 flex flex-wrap gap-2">
-                                {project.tags.map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="inline-block px-3 py-1 border border-(--blackbean) rounded-full text-xs font-space bg-(--cornell) text-(--ivory)"
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
+                                <h3 className="mt-2 font-funnel text-lg"> {project.title} </h3>
+                                <div className="mt-2 flex flex-wrap gap-2">
+                                    {project.tags.map((tag) => (
+                                        <span
+                                            key={tag}
+                                            className="inline-block px-3 py-1 border border-(--blackbean) rounded-full text-xs font-space bg-(--cornell) text-(--ivory)"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="mt-4 inline-block underline underline-offset-4"
+                                >
+                                    View project →
+                                </a>
+
+
                             </div>
-
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="mt-4 inline-block underline underline-offset-4"
-                            >
-                                View project →
-                            </a>
-
-
-                        </div>
-                    ))}
+                        ))
+                    ) : (
+                        <p className="md:col-span-2"> No projects in this category yet.</p>
+                    )}
                 </div>
             </div>
         </main>

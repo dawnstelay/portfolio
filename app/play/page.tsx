@@ -80,9 +80,9 @@ export default function Play() {
   return (
     <main className="min-h-screen w-full px-5 py-20 font-funnel sm:px-10">
       <div className="mx-auto max-w-7xl">
-        <header className="mb-10 text-center">
+        <header className="py-10 mb-10 text-center">
           <p className="font-space text-sm uppercase tracking-[0.2em] text-slate-500">
-            Move things around
+            Move things around + Resize
           </p>
 
           <h1 className="mt-2 font-kiwi text-5xl text-(--blackbean)">
@@ -90,17 +90,11 @@ export default function Play() {
           </h1>
 
           <p className="mx-auto mt-3 max-w-xl font-space text-slate-600">
-            Drag each artwork from its handle. Resize it from the corner and
-            click it to view its caption.
+            Explore some of my personal works + hobbies
           </p>
         </header>
 
         <MuuriBoard images={images} />
-
-        <p className="mt-6 text-center font-space text-sm text-slate-500">
-          Tip: drag from the small bar above each image. Resize from the
-          bottom-right circle.
-        </p>
       </div>
     </main>
   );

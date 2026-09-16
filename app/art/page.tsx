@@ -68,9 +68,9 @@ export default function Art() {
 
 
     return (
-        <main className="font-funnel min-h-200 w-full flex flex-col items-center justify-center p-10">
-            <div className="py-20 max-w-full items-center m-5">
-                <h1 className="py-10 m-10 mb-2 text-6xl font-kiwi text-center text-(--blackbean)">Gallery</h1>
+        <main className="py-20 font-funnel min-h-full max-w-full">
+            <div className="mx-auto max-w-7xl">
+                <h1 className="py-10 m-10 mb-5 text-6xl font-kiwi text-center text-(--blackbean)">Gallery</h1>
                 <FilterBar
                     tags={tags}
                     active={active}
@@ -78,23 +78,26 @@ export default function Art() {
                 />
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 ">
-                    {filtered.map((work, index) => (
-                        <button
-                            key={work.name}
-                            type="button"
-                            onClick={() => setSelectedIndex(index)}
-                            aria-label={`Open ${work.name}`}
-                            className="group overflow-hidden rounded-xl text-left focus:outline-none focus:ring-1 focus:ring-(--sky) focus:ring-offset-4"
-                        >
-                            <img
-                                src={work.image}
-                                alt={work.name}
-                                width={600}
-                                height={400}
-                                className="h-auto w-full rounded-xl transition-transform duration-500 ease-out group-hover:scale-105"
-                            />
-                        </button>
-                    ))}
+                    {filtered.length > 0 ? (
+                        filtered.map((work, index) => (
+                            <button
+                                key={work.name}
+                                type="button"
+                                onClick={() => setSelectedIndex(index)}
+                                aria-label={`Open ${work.name}`}
+                                className="group overflow-hidden rounded-xl text-left focus:outline-none focus:ring-1 focus:ring-(--sky) focus:ring-offset-4"
+                            >
+                                <img
+                                    src={work.image}
+                                    alt={work.name}
+                                    width={600}
+                                    height={400}
+                                    className="h-auto w-full rounded-xl transition-transform duration-500 ease-out group-hover:scale-105"
+                                />
+                            </button>
+                        ))) : (
+                        <p className="md:col-span-2"> No projects in this category yet.</p>
+                    )}
                 </div>
             </div>
 
