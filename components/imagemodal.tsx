@@ -27,15 +27,15 @@ export default function ImageModal({
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="group block w-full cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-[var(--sky)] focus:ring-offset-4"
         aria-label={`Open image: ${alt}`}
+        className="group block h-full w-full cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-[var(--sky)] focus:ring-offset-4"
       >
         <img
           src={src}
           alt={alt}
           width={width}
           height={height}
-          className="block h-auto w-full transition-transform duration-300 ease-out group-hover:scale-[1.015]"
+          className="block h-full w-full object-fill transition-transform duration-300 ease-out group-hover:scale-[1.015]"
         />
       </button>
 

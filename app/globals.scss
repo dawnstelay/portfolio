@@ -172,40 +172,45 @@
 //**********************************************************************
 // PLAYGROUND CLASSES
 
-.playground-grid .react-grid-item {
-  transition: transform 180ms ease-out;
+.play-grid .react-grid-item {
+  overflow: visible;
 }
 
-.playground-grid .react-grid-item.react-grid-placeholder {
-  border-radius: 1rem;
-  background: color-mix(in srgb, var(--sky) 45%, transparent);
-  opacity: 0.55;
+.play-grid .react-grid-item>.react-resizable-handle {
+  width: 48px !important;
+  height: 48px !important;
+  right: -14px !important;
+  bottom: -14px !important;
+  z-index: 40;
+  cursor: se-resize;
 }
 
-.playground-grid .react-grid-item>.react-resizable-handle {
-  right: 7px;
-  bottom: 7px;
-  width: 18px;
-  height: 18px;
-  border-right: 3px solid var(--blackbean);
-  border-bottom: 3px solid var(--blackbean);
-  border-radius: 0 0 5px 0;
-  background: none;
-  opacity: 0.72;
+.play-grid .react-grid-item>.react-resizable-handle::after {
+  display: none !important;
 }
 
-.playground-grid .react-grid-item>.react-resizable-handle::after {
-  display: none;
+.play-grid .react-grid-item.react-grid-placeholder {
+  border-radius: 0.75rem;
+  background: color-mix(in srgb,
+      var(--sky) 35%,
+      transparent);
+  opacity: 0.6;
 }
 
-.playground-grid .react-grid-item:hover>.react-resizable-handle {
-  opacity: 1;
+.play-grid .react-grid-item.react-draggable-dragging {
+  z-index: 50 !important;
+}
+
+.play-grid .react-grid-item.react-resizable-resizing {
+  z-index: 50 !important;
 }
 
 @media (max-width: 640px) {
-  .playground-grid .react-grid-item>.react-resizable-handle {
-    width: 22px;
-    height: 22px;
+  .play-grid .react-grid-item>.react-resizable-handle {
+    width: 44px !important;
+    height: 44px !important;
+    right: -12px !important;
+    bottom: -12px !important;
   }
 }
 
